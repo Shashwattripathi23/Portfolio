@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "StillALive",
+      "description": "A personal safety and check-in application that allows users to set status updates, receive personalized push notifications, and enable DND mode. Built with React Native and Firebase.",
+      "url": "https://github.com/yourusername/stillalive",
+      "tags": [
+        "React Native",
+        "Firebase",
+        "Push Notifications",
+        "Mobile"
+      ],
+      "images": [
+        "sa1.jpg",
+        "sa2.jpg",
+        "sa3.jpg",
+        "sa5.jpg",
+        "sa6.jpg",
+        "sa7.jpg"
+      ],
+      "thumbnail": "sathumb.png"
+    },
+    {
+      "id": 2,
+      "name": "Kozeo",
+      "description": "A consumer-facing social and project-based platform that helps computer science students build strong profiles through real-life, paid projects and verified experience.",
+      "url": "https://github.com/yourusername/kozeo",
+      "tags": [
+        "React",
+        "Node.js",
+        "Social Platform",
+        "Full Stack"
+      ],
+      "images": [
+        "kz1.png",
+        "kz2.png",
+        "kz3.png",
+        "kz4.png",
+        "kz5.png",
+        "kz6.png",
+        "kz8.png",
+        "kz9.png",
+        "kz10.png",
+        "kz11.png",
+        "kz12.png",
+        "kz13.png"
+      ],
+      "thumbnail": "kzlogo.png"
+    },
+    {
+      "id": 3,
+      "name": "NirogyaSaathi",
+      "description": "A digital healthcare companion platform focused on wellness tracking, health assistance, and remote support features for patients and caregivers.",
+      "url": "https://github.com/yourusername/nirogya-saathi",
+      "tags": [
+        "Healthcare",
+        "React",
+        "Digital Health",
+        "Wellness"
+      ],
+      "images": [
+        "ns1.png",
+        "ns2.png",
+        "ns3.png",
+        "ns4.png",
+        "ns5.png",
+        "ns6.png",
+        "ns7.png",
+        "ns8.png",
+        "ns9.png",
+        "ns10.png"
+      ],
+      "thumbnail": "nslogo1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "SatvikYoga",
+      "description": "A yoga and wellness application offering guided sessions, progress tracking, and personalized routines to promote a healthy and balanced lifestyle.",
+      "url": "https://github.com/yourusername/satvik-yoga",
+      "tags": [
+        "Yoga",
+        "Wellness",
+        "Mobile App",
+        "Health"
+      ],
+      "images": [
+        "sy1.png",
+        "sy2.png",
+        "sy3.png",
+        
+        "sy5.png",
+        "sy6.png",
+        "sy7.png"
+        
+      ],
+      "thumbnail": "sythumb.png"
+    }
+  ]
+}
