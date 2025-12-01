@@ -11,6 +11,8 @@ interface Project {
   url: string;
   images: string[];
   thumbnail: string;
+  tags: string[];
+  repo?: string;
 }
 
 interface HeroProps {
@@ -36,7 +38,9 @@ export default function Hero({
   // Yellow box stays in relative flow and scales up in place
   const yellowBoxScale = 1 + scrollProgress * 0.8;
   const yellowBoxOpacity = 1;
-  const yellowBoxTransform = `scale(${yellowBoxScale}) translateX(${scrollProgress * 10}%)`;
+  const yellowBoxTransform = `scale(${yellowBoxScale}) translateX(${
+    scrollProgress * 10
+  }%)`;
 
   return (
     <div className="min-h-screen flex items-center justify-center overflow-hidden">

@@ -6,8 +6,7 @@ import ProjectCarousel from "./ProjectCarousel";
 import ProjectImageCarousel from "./ProjectImageCarousel";
 import SocialCanvas from "./SocialCanvas";
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
-import ManWithLaptop from "./ManwithLaptop";
-import ProceduralMan3D from "./ProceduralMan3D";
+
 import StickmanRagdoll from "./Stickman";
 interface Project {
   id: number;
@@ -17,6 +16,7 @@ interface Project {
   images: string[];
   thumbnail: string;
   tags: string[];
+  repo?: string;
 }
 
 interface combinedProps {
@@ -261,16 +261,11 @@ export default function Combined({
               style={{ pointerEvents: "auto" }}
             >
               {/* Close button */}
-               <button
-
+              <button
                 onClick={onClose}
-
                 data-cursor-text="CLOSE"
-
                 className="absolute top-8 right-8 w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition-all border border-white/10 hover:border-white/20 group z-50"
-
               >
-
                 <svg
                   width="18"
                   height="18"
@@ -319,18 +314,17 @@ export default function Combined({
                 <h2 className="text-sm uppercase tracking-wider text-white/40 font-semibold">
                   Project Brief
                 </h2>
-                
+
                 <p className="text-lg  md:text-xl text-white/80 font-light leading-relaxed max-w-prose">
                   {selectedProject.description}
-                </p> 
+                </p>
               </div>
               {/* Tags */}
               <div className="flex items-center flex-row justify-center gap-2">
                 {selectedProject.tags && selectedProject.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2 -4">
                     {selectedProject.tags.map((tag, index) => (
-                    <span className="px-3 py-1 bg-white/[0.03] text-white/60 text-xs font-mono uppercase tracking-widest border border-white/10 rounded-md">
-
+                      <span className="px-3 py-1 bg-white/[0.03] text-white/60 text-xs font-mono uppercase tracking-widest border border-white/10 rounded-md">
                         {tag}
                       </span>
                     ))}

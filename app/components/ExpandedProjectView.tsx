@@ -10,6 +10,8 @@ interface Project {
   url: string;
   images: string[];
   thumbnail: string;
+  tags: string[];
+  repo?: string;
 }
 
 interface ExpandedProjectViewProps {

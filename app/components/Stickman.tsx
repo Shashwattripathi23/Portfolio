@@ -60,7 +60,7 @@ export default function InteractiveStickman() {
         this.y += vy + GRAVITY;
       }
 
-      constrain() {
+      constrain(canvasWidth: number) {
         if (this.y > GROUND_Y) {
           this.y = GROUND_Y;
           const vx = this.x - this.px;
@@ -70,8 +70,8 @@ export default function InteractiveStickman() {
           this.x = 0;
           this.px = this.x + (this.x - this.px) * BOUNCE;
         }
-        if (this.x > canvas.width) {
-          this.x = canvas.width;
+        if (this.x > canvasWidth) {
+          this.x = canvasWidth;
           this.px = this.x + (this.x - this.px) * BOUNCE;
         }
       }
@@ -260,7 +260,7 @@ export default function InteractiveStickman() {
       // 2. Physics Update
       points.forEach((p) => {
         p.update();
-        p.constrain();
+        p.constrain(canvas.width);
       });
 
       // 3. Stick Constraints (Run multiple times for stiffness)

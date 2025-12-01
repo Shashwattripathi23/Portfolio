@@ -2,30 +2,27 @@ import React, { useState, useEffect, useRef } from "react";
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
 
 const SocialCanvas = ({ scrollProgress }: { scrollProgress: number }) => {
-const socials = [
-  { icon: Github, link: "#", label: "GitHub", color: "#495e33" },    // Very deep, muted olive-drab (Grey/Green)
-  { icon: Linkedin, link: "#", label: "LinkedIn", color: "#6b7a5a" },  // Soft, subdued military green (Less saturation)
-  { icon: Mail, link: "#", label: "Email", color: "#8b947f" },      // Lightest highlight, still dull (Earthy Gray-Green)
-  { icon: Twitter, link: "#", label: "Twitter", color: "#3a472a" },    // Maximum dullness, very dark background tone
-  { icon: Instagram, link: "#", label: "Instagram", color: "#a2a899" }, // Subtly lighter, foggy gray-green
-];
+  const socials = [
+    { icon: Github, link: "#", label: "GitHub", color: "#495e33" }, // Very deep, muted olive-drab (Grey/Green)
+    { icon: Linkedin, link: "#", label: "LinkedIn", color: "#6b7a5a" }, // Soft, subdued military green (Less saturation)
+    { icon: Mail, link: "#", label: "Email", color: "#8b947f" }, // Lightest highlight, still dull (Earthy Gray-Green)
+    { icon: Twitter, link: "#", label: "Twitter", color: "#3a472a" }, // Maximum dullness, very dark background tone
+    { icon: Instagram, link: "#", label: "Instagram", color: "#a2a899" }, // Subtly lighter, foggy gray-green
+  ];
 
-  const canvasRef = useRef(null);
-  const containerRef = useRef(null);
-  const [dragging, setDragging] = useState(null);
-  const animationRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [dragging, setDragging] = useState<number | null>(null);
+  const animationRef = useRef<number | null>(null);
   const [initialJerkApplied, setInitialJerkApplied] = useState(false);
 
-  const [activeDrag, setActiveDrag] = useState(null);
+  const [activeDrag, setActiveDrag] = useState<number | null>(null);
   const [showGoal, setShowGoal] = useState(false);
 
   const centerX = 40;
   const spacing = 160;
 
-  const [goalColor, setGoalColor] = useState(null);
-
-
-  
+  const [goalColor, setGoalColor] = useState<string | null>(null);
 
   // initial vertical chain
   const [nodes, setNodes] = useState(
@@ -110,59 +107,60 @@ const socials = [
 
     animationRef.current = requestAnimationFrame(simulate);
 
-    return () => cancelAnimationFrame(animationRef.current);
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, [dragging]);
 
   //intital jerk
 
   // Initial Jerk/Wave Effect
-useEffect(() => {
-  // Check if the component is being translated up (is visible)
-  const isComponentVisible = scrollProgress > 1.8; // Use the same threshold as your display logic
+  useEffect(() => {
+    // Check if the component is being translated up (is visible)
+    const isComponentVisible = scrollProgress > 1.8; // Use the same threshold as your display logic
 
-  if (isComponentVisible && !initialJerkApplied) {
-    setNodes((prevNodes) => {
-      // Create a copy to update
-      const newNodes = prevNodes.map((node, i) => {
-        // Apply an initial, temporary velocity
-        let initialVx = 0;
-        let initialVy = 0;
+    if (isComponentVisible && !initialJerkApplied) {
+      setNodes((prevNodes) => {
+        // Create a copy to update
+        const newNodes = prevNodes.map((node, i) => {
+          // Apply an initial, temporary velocity
+          let initialVx = 0;
+          let initialVy = 0;
 
-        // Apply a wave effect: alternate the horizontal kick
-        if (i % 2 === 0) {
-          initialVx = 10; // Kick to the right
-        } else {
-          initialVx = -10; // Kick to the left
-        }
+          // Apply a wave effect: alternate the horizontal kick
+          if (i % 2 === 0) {
+            initialVx = 10; // Kick to the right
+          } else {
+            initialVx = -10; // Kick to the left
+          }
 
-        // Apply a vertical kick (optional, but can add to the "drop" feeling)
-        initialVy = -5;
+          // Apply a vertical kick (optional, but can add to the "drop" feeling)
+          initialVy = -5;
 
-        return {
-          ...node,
-          // Add the impulse to the current velocity
-          vx: node.vx + initialVx,
-          vy: node.vy + initialVy,
-        };
+          return {
+            ...node,
+            // Add the impulse to the current velocity
+            vx: node.vx + initialVx,
+            vy: node.vy + initialVy,
+          };
+        });
+        return newNodes;
       });
-      return newNodes;
-    });
 
-    setInitialJerkApplied(true); // Mark as done
-  }
-}, [scrollProgress, initialJerkApplied]); // Dependencies
+      setInitialJerkApplied(true); // Mark as done
+    }
+  }, [scrollProgress, initialJerkApplied]); // Dependencies
 
-
-useEffect(() => {
+  useEffect(() => {
     // Reset the initial jerk flag when the component is not visible
     if (scrollProgress <= 1.8 && initialJerkApplied) {
       setInitialJerkApplied(false);
     }
-  }
-, [scrollProgress, initialJerkApplied]);
+  }, [scrollProgress, initialJerkApplied]);
 
-
-// randomly jerk periodically
+  // randomly jerk periodically
   useEffect(() => {
     const interval = setInterval(() => {
       setNodes((prevNodes) => {
@@ -180,14 +178,11 @@ useEffect(() => {
           return node;
         });
         return newNodes;
-      }
-      );
+      });
     }, 2000); // Every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
-
-
 
   // Draw connections + glow
   useEffect(() => {
@@ -195,6 +190,8 @@ useEffect(() => {
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
     const rect = canvas.getBoundingClientRect();
     canvas.width = rect.width;
     canvas.height = rect.height;
@@ -246,16 +243,18 @@ useEffect(() => {
   }, [nodes]);
 
   // Dragging logic
-  const handleMouseDown = (index) => {
+  const handleMouseDown = (index: number) => {
     setDragging(index);
     setActiveDrag(index);
     setShowGoal(true);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (dragging === null) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
+
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
@@ -303,7 +302,9 @@ useEffect(() => {
     setActiveDrag(null);
     setShowGoal(false);
 
-    const rect = containerRef.current.getBoundingClientRect();
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
+
     const goal = document.getElementById("goal-circle");
     const goalRect = goal?.getBoundingClientRect();
 
@@ -326,16 +327,17 @@ useEffect(() => {
     setShowGoal(false);
   };
 
-  const chainTransform = `translateY(${Math.max(0 ,150 - scrollProgress * 50)}%)`;
+  const chainTransform = `translateY(${Math.max(
+    0,
+    150 - scrollProgress * 50
+  )}%)`;
 
   return (
     <div
       style={{
-        transform:
-          scrollProgress > 1.5 ? chainTransform: "translateY(80%)",
-          display: scrollProgress > 1.8 ? "block" : "none",
+        transform: scrollProgress > 1.5 ? chainTransform : "translateY(80%)",
+        display: scrollProgress > 1.8 ? "block" : "none",
 
-           
         transition: "transform 0.3s ease-out",
       }}
       className="min-h-screen flex items-center justify-center p-10"

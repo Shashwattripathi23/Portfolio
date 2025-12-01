@@ -11,6 +11,7 @@ interface Project {
   images: string[];
   thumbnail: string;
   tags: string[];
+  repo?: string;
 }
 
 interface ProjectCarouselProps {

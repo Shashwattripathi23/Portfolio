@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "StillALive",
-      "description": "A personal safety and check-in application that allows users to set status updates, receive personalized push notifications, and enable DND mode. Built with React Native and Firebase.",
-      "url": "https://github.com/yourusername/stillalive",
+      "description": "A real-time personal safety and digital check-in application designed to help users share live status updates, trigger personalized emergency notifications. Built with React Native and Firebase.",
+      "url": "https://stillalive.vercel.app",
       "tags": [
         "React Native",
         "Firebase",
-        "Push Notifications",
-        "Mobile"
+        "FCM",
+        "Full Stack Mobile"
       ],
       "images": [
         "sa1.jpg",
@@ -24,13 +24,13 @@
     {
       "id": 2,
       "name": "Kozeo",
-      "description": "A consumer-facing social and project-based platform that helps computer science students build strong profiles through real-life, paid projects and verified experience.",
-      "url": "https://github.com/yourusername/kozeo",
+      "description": "A consumer-facing social and project collaboration platform that connects computer science students with real-world, paid projects to build verified experience, portfolios, and industry exposure.",
+      "url": "https://kozeo.in",
       "tags": [
-        "React",
-        "Node.js",
-        "Social Platform",
-        "Full Stack"
+        "Full Stack",
+        "Startup Platform",
+        "Social Networking",
+        "Project Marketplace"
       ],
       "images": [
         "kz1.png",
@@ -51,13 +51,13 @@
     {
       "id": 3,
       "name": "NirogyaSaathi",
-      "description": "A digital healthcare companion platform focused on wellness tracking, health assistance, and remote support features for patients and caregivers.",
-      "url": "https://github.com/yourusername/nirogya-saathi",
+      "description": "NirogyaSaathi is a doctor-facing digital healthcare management platform used to securely maintain patient records, manage outpatient (OPD) workflows, and generate digital prescriptions.",
+      "url": "https://nirogya-saathi.vercel.app",
       "tags": [
-        "Healthcare",
-        "React",
-        "Digital Health",
-        "Wellness"
+        
+        "Healthcare Tech",
+        "Wellness Tracking",
+        "Patient Monitoring"
       ],
       "images": [
         "ns1.png",
@@ -76,23 +76,22 @@
     {
       "id": 4,
       "name": "SatvikYoga",
-      "description": "A yoga and wellness application offering guided sessions, progress tracking, and personalized routines to promote a healthy and balanced lifestyle.",
-      "url": "https://github.com/yourusername/satvik-yoga",
+      "description": "SatvikYoga is a freelance project for a yoga studio where I built a fully responsive, visually calming website aligned with their brand identity, featuring service details and integrated video content for an engaging user experience.",
+      "url": "https://www.satvikyoga.nl",
       "tags": [
-        "Yoga",
-        "Wellness",
-        "Mobile App",
-        "Health"
+        "Freelance",
+        "Responsive Design",
+        "Brand Identity"
+        
+      
       ],
       "images": [
         "sy1.png",
         "sy2.png",
         "sy3.png",
-        
         "sy5.png",
         "sy6.png",
         "sy7.png"
-        
       ],
       "thumbnail": "sythumb.png"
     }
