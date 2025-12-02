@@ -82,7 +82,7 @@ body::before {
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 900;
             background: linear-gradient(135deg, #ffffff 0%, #626262 50%, #1f1f1f 100%);
             -webkit-background-clip: text;
@@ -98,7 +98,7 @@ body::before {
 
         .intro {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-size: clamp(1rem, 2vw, 1.3rem);
             color: #e0e0e0;
             line-height: 1.8;
             font-weight: 300;
@@ -135,3 +135,34 @@ body::before {
             margin: 0 0.5rem;
             animation: pulse 2s ease-in-out infinite;
         }
+
+/* Minimal responsive font class that respects user font size preferences */
+.text-responsive-base { 
+  font-size: clamp(0.875rem, 1.5vw + 0.3rem, 0.95rem);
+}
+
+/* High DPI display support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .text-responsive-base {
+    font-size: clamp(0.875rem, 1.8vw + 0.3rem, 1rem);
+  }
+}
+
+/* Zoom level constraints to prevent oversized elements */
+@media (min-resolution: 120dpi) {
+  .name {
+    font-size: clamp(2rem, 5vw, 3.8rem) !important;
+  }
+  .intro {
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem) !important;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

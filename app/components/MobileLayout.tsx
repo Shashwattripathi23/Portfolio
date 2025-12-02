@@ -240,7 +240,7 @@ export default function MobileLayout({
                       ideas into products that bring me joy. For more of my
                       backend and systems design work, check out my{" "}
                       <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/Shashwattripathi23"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative font-bold text-white inline-block after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-purple-400 after:to-pink-500 after:scale-x-0 after:origin-bottom-left after:transition-transform hover:after:scale-x-100"
@@ -256,15 +256,15 @@ export default function MobileLayout({
               <div className="mb-12">
                 {/* 🚀 HEADING: Refined Typography with Subtle Accent */}
                 <div className="mb-8">
-                  <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-white/90">
-                    <span style={{ color: oliveAccent }}>Tech stack</span>
+                  <h3 className="text-xl md:text-2xl font-mono border-b-1 tracking-tight text-white/90">
+                    <span style={{ color: "white" }}>Tech stack</span>
                   </h3>
-                  <div
+                  {/* <div
                     className="w-16 h-0.5 mt-2 rounded-full"
                     style={{
                       background: `linear-gradient(to right, ${oliveAccent}, transparent)`,
                     }}
-                  />
+                  />// Decorative underline */}
                 </div>
 
                 {/* 🛠️ TECH TAGS: Enhanced Style and Animation */}
@@ -299,7 +299,7 @@ export default function MobileLayout({
               </div>
 
               {/* Social Canvas Footer */}
-              <div className="rounded-2xl overflow-hidden border border-white/5 bg-neutral-900/20 p-6">
+              <div className="rounded-2xl overflow-hidden border border-white/5 bg-neutral-900/20 p-6 relative z-10">
                 <div className="mb-4">
                   <h4 className="text-lg font-bold text-white/90 mb-2">
                     Connect
@@ -312,10 +312,11 @@ export default function MobileLayout({
 
                 <div className="grid grid-cols-2 gap-4">
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/Shashwattripathi23"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group cursor-pointer relative z-20"
+                    style={{ pointerEvents: "auto" }}
                   >
                     <FaGithub className="text-2xl text-white group-hover:text-white/90" />
                     <div>
@@ -327,10 +328,11 @@ export default function MobileLayout({
                   </a>
 
                   <a
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://in.linkedin.com/in/shashwat-tripathi-145203220"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group cursor-pointer relative z-20"
+                    style={{ pointerEvents: "auto" }}
                   >
                     <FaLinkedin className="text-2xl text-blue-400 group-hover:text-blue-300" />
                     <div>
@@ -340,10 +342,11 @@ export default function MobileLayout({
                   </a>
 
                   <a
-                    href="https://twitter.com/yourusername"
+                    href="https://x.com/ornahihorabhai?t=XRT0P3qkPvbcisxu93DKDw&s=09"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group cursor-pointer relative z-20"
+                    style={{ pointerEvents: "auto" }}
                   >
                     <FaTwitter className="text-2xl text-sky-400 group-hover:text-sky-300" />
                     <div>
@@ -353,10 +356,11 @@ export default function MobileLayout({
                   </a>
 
                   <a
-                    href="https://instagram.com/yourusername"
+                    href="https://www.instagram.com/shashwat23t/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-800/70 transition-all duration-300 group cursor-pointer relative z-20"
+                    style={{ pointerEvents: "auto" }}
                   >
                     <FaInstagram className="text-2xl text-pink-400 group-hover:text-pink-300" />
                     <div>

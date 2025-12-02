@@ -25,6 +25,7 @@ interface combinedProps {
   onProjectClick: (project: Project) => void;
   scrollProgres: number;
   onScrollToSection: (section: number) => void;
+  onProjectDetailOpenChange?: (isOpen: boolean) => void;
 }
 
 export default function Combined({
@@ -33,6 +34,7 @@ export default function Combined({
   onProjectClick,
   onScrollToSection,
   scrollProgres,
+  onProjectDetailOpenChange,
 }: combinedProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -95,10 +97,15 @@ export default function Combined({
       document.body.style.overflow = "unset";
     }
 
+    // Notify parent component about projectDetailOpen state change
+    if (onProjectDetailOpenChange) {
+      onProjectDetailOpenChange(projectDetailOpen);
+    }
+
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [projectDetailOpen]);
+  }, [projectDetailOpen, onProjectDetailOpenChange]);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -219,7 +226,7 @@ export default function Combined({
             className="bg- -500 p-6  transition-all duration-700 ease-out"
           >
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold text-white text-left">
+              <h3 className="text-xl font-semibold uppercase font-roboto text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/20 text-left">
                 {projectDetailOpen ? "" : "Selected Works"}
               </h3>
             </div>
@@ -241,7 +248,7 @@ export default function Combined({
 
         {selectedProject && scrollProgress > 0.5 ? (
           <div
-            className="w-1/2 h-[900px]  rounded-xl bg-black/40 flex justify-between transition-all duration-700 ease-out border-white/10 rounded-b-lg relative shadow-white"
+            className="w-1/2 h-[900px] rounded-xl bg-black/40 flex justify-between transition-all duration-700 ease-out border-white/10 rounded-b-lg relative shadow-white"
             style={{ pointerEvents: "auto" }}
           >
             {/* Subtle background pattern */}
@@ -315,7 +322,7 @@ export default function Combined({
                   Project Brief
                 </h2>
 
-                <p className="text-lg  md:text-xl text-white/80 font-light leading-relaxed max-w-prose">
+                <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-prose">
                   {selectedProject.description}
                 </p>
               </div>
@@ -324,7 +331,10 @@ export default function Combined({
                 {selectedProject.tags && selectedProject.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2 -4">
                     {selectedProject.tags.map((tag, index) => (
-                      <span className="px-3 py-1 bg-white/[0.03] text-white/60 text-xs font-mono uppercase tracking-widest border border-white/10 rounded-md">
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-white/[0.03] text-white/60 text-xs font-mono uppercase tracking-widest border border-white/10 rounded-md"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -382,7 +392,7 @@ export default function Combined({
                   <h2 className="text-sm uppercase tracking-wider text-white/40 font-semibold">
                     Gallery
                   </h2>
-                  <div className="h-[400px] rounded-2xl  mx-10 mt-10  border overflow-hidden bg-transparent  border-white/10">
+                  <div className="h-[400px] rounded-2xl mx-10 mt-10 border overflow-hidden bg-transparent border-white/10">
                     <ProjectImageCarousel
                       images={selectedProject.images}
                       projectName={selectedProject.name}
@@ -466,7 +476,7 @@ export default function Combined({
                   display: scrollProgress > 1.5 ? "block" : "none",
                 }}
               >
-                <h3 className="text-3xl font-bold text-white/95">
+                <h3 className="text-3xl font-mono uppercase  text-white/95">
                   Tech Stack & Skills
                 </h3>
 
@@ -483,7 +493,7 @@ export default function Combined({
                      hover:bg-white/20 hover:border-purple-300/50 hover:-translate-y-1 
                      cursor-default"
                     >
-                      <span className="text-white text-base font-semibold">
+                      <span className="text-white text-responsive-base font-semibold">
                         {tech}
                       </span>
                     </motion.div>

@@ -27,6 +27,7 @@ export default function Home() {
   const [disclaimerOn, setDisclaimerOn] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [musicOn, setMusicOn] = useState(false);
+  const [projectDetailOpen, setProjectDetailOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -92,6 +93,7 @@ export default function Home() {
                 setScrollIndex={setScrollProgress}
                 musicOn={musicOn}
                 setMusicOn={setMusicOn}
+                projectDetailOpen={projectDetailOpen}
               />
               <Combined
                 projects={projects}
@@ -99,6 +101,7 @@ export default function Home() {
                 onProjectsClick={handleProjectsClick}
                 scrollProgres={scrollProgress}
                 onScrollToSection={setScrollProgress}
+                onProjectDetailOpenChange={setProjectDetailOpen}
               />
             </>
           )}

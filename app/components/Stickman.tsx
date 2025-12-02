@@ -289,25 +289,20 @@ export default function InteractiveStickman() {
       // random message bubbles
       // infinit loop of random messages near the stickman , syau for 4 seconds
       const idleMessages = [
+        // 🔥 Badass Pop-Culture Energy
+        "I am the one who draws.",
+        "If you think this has a happy ending, you haven’t been paying attention.",
 
+        "Say my name… render it.",
+        "You’re not watching the code… the code is watching you.",
+        "I didn’t break the system. I became it.",
+        "Every frame is earned.",
 
-  // 🔥 Badass Pop-Culture Energy
-  "I am the one who draws.",
-  "Chaos isn’t a pit… it’s my default state.",
-  "Power is power. Even in pixels.",
-  "If you think this has a happy ending, you haven’t been paying attention.",
-  "I don’t need permission. I execute.",
-  "Control is an illusion. I run the loop.",
-  "You’re not watching the code… the code is watching you.",
-  "I didn’t break the system. I became it.",
-  "Every frame is earned.",
-  "Fear cuts deeper than lag.",
-  "Say my name… render it.",
-  "I am not a bug. I am the feature.",
-  "The canvas remembers.",
-  "Kings fall. Frames persist.",
-  "I don’t wait for events. I trigger them."
-];
+        "I am not a bug. I am the feature.",
+        "The canvas remembers.",
+        "Kings fall. I fall harder.",
+        "I don’t wait for events. I trigger them.",
+      ];
 
       const dragMessages = [
         "Hey—hands off the merchandise 😤",
@@ -327,7 +322,12 @@ export default function InteractiveStickman() {
         "Dragged but never defeated.",
       ];
 
-      function drawSpeechBubble(ctx: CanvasRenderingContext2D, x: number, y: number, text: string) {
+      function drawSpeechBubble(
+        ctx: CanvasRenderingContext2D,
+        x: number,
+        y: number,
+        text: string
+      ) {
         if (bubbleOpacity <= 0.01) return; // Don't draw if invisible
 
         ctx.save(); // Save context to handle opacity safely
@@ -337,7 +337,7 @@ export default function InteractiveStickman() {
         const paddingY = 8;
         const fontSize = 20;
         ctx.font = `600 ${fontSize}px sans-serif`; // Clean, bold font
-        
+
         const textMetrics = ctx.measureText(text);
         const textWidth = textMetrics.width;
         const bubbleWidth = textWidth + paddingX * 2;

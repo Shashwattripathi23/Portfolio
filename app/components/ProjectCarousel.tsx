@@ -67,17 +67,17 @@ export default function ProjectCarousel({
       case "hero":
         return { width: 280, height: 280, showName: false };
       case "expand":
-        return { width: 400, height: 450, showName: true };
+        return { width: 320, height: 360, showName: true };
       case "collapse":
-        return { width: 200, height: 200, showName: true };
+        return { width: 180, height: 180, showName: true };
       case "mobile":
         return {
-          width: 260,
-          height: 380,
+          width: 240,
+          height: 340,
           showName: true,
         };
       default:
-        return { width: 650, height: 650, showName: true };
+        return { width: 500, height: 500, showName: true };
     }
   };
 
@@ -191,7 +191,7 @@ export default function ProjectCarousel({
                   transition={{ delay: 0.2 }}
                   className="absolute -bottom-12 left-0 right-0 flex flex-col items-center"
                 >
-                  <h3 className=" mx-12 text-white font-bold text-xl tracking-tight text-center drop-shadow-md">
+                  <h3 className=" mx-12 text-white font-bold text-lg tracking-tight text-center drop-shadow-md max-w-xs overflow-hidden text-ellipsis">
                     {project.name}
                   </h3>
                 </motion.div>

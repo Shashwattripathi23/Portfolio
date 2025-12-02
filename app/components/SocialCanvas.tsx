@@ -3,11 +3,11 @@ import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
 
 const SocialCanvas = ({ scrollProgress }: { scrollProgress: number }) => {
   const socials = [
-    { icon: Github, link: "#", label: "GitHub", color: "#495e33" }, // Very deep, muted olive-drab (Grey/Green)
-    { icon: Linkedin, link: "#", label: "LinkedIn", color: "#6b7a5a" }, // Soft, subdued military green (Less saturation)
-    { icon: Mail, link: "#", label: "Email", color: "#8b947f" }, // Lightest highlight, still dull (Earthy Gray-Green)
-    { icon: Twitter, link: "#", label: "Twitter", color: "#3a472a" }, // Maximum dullness, very dark background tone
-    { icon: Instagram, link: "#", label: "Instagram", color: "#a2a899" }, // Subtly lighter, foggy gray-green
+    { icon: Github, link: "https://github.com/Shashwattripathi23", label: "GitHub", color: "#495e33" }, // Very deep, muted olive-drab (Grey/Green)
+    { icon: Linkedin, link: "https://in.linkedin.com/in/shashwat-tripathi-145203220", label: "LinkedIn", color: "#6b7a5a" }, // Soft, subdued military green (Less saturation)
+    { icon: Mail, link: "mailto:shashwat@example.com", label: "Email", color: "#8b947f" }, // Lightest highlight, still dull (Earthy Gray-Green)
+    { icon: Twitter, link: "https://x.com/ornahihorabhai?t=XRT0P3qkPvbcisxu93DKDw&s=09", label: "Twitter", color: "#3a472a" }, // Maximum dullness, very dark background tone
+    { icon: Instagram, link: "https://www.instagram.com/shashwat23t/", label: "Instagram", color: "#a2a899" }, // Subtly lighter, foggy gray-green
   ];
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
