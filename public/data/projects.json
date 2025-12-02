@@ -71,7 +71,7 @@
         "ns9.png",
         "ns10.png"
       ],
-      "thumbnail": "nslogo1.jpg"
+      "thumbnail": "nsnewlogo.jpg"
     },
     {
       "id": 4,
@@ -93,7 +93,29 @@
         "sy6.png",
         "sy7.png"
       ],
-      "thumbnail": "sythumb.png"
+      "thumbnail": "sylogonew (1).jpg"
+    },
+    {
+      "id": 5,
+      "name": "Voicle",
+      "description": "Voicle is a dating app that focuses primarily on audio profiles of users and workspace locations to connect people based on voice and proximity and match them based on shared interests and preferences.",
+      "url": "https://www.voicle.app/",
+      "tags": [
+        "Freelance",
+        "Mobile App",
+        "React Native"
+        
+      
+      ],
+      "images": [
+        "vc1.jpeg",
+        "vc2.jpeg",
+        "vc3.jpeg",
+        "vc4.jpeg",
+        "vc5.png"
+       
+      ],
+      "thumbnail": "vclogo.png"
     }
   ]
 }
