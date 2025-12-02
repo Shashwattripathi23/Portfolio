@@ -55,21 +55,26 @@ export default function MobileLayout({
   const sections = ["Home", "Projects", "Social"];
   const oliveAccent = "#8b947f";
 
-  const techStack = [
-    "React",
+   const techStack = [
+    "ReactJS",
+    "NextJS",
     "TypeScript",
-    "Node.js",
-    "Next.js",
-    "Tailwind CSS",
-    "MongoDB",
-    "Express",
-    "Git",
     "Python",
-    "PostgreSQL",
-    "Docker",
-    "AWS",
+    "Django",
+    "NodeJS",
+    "GraphQL",
+    "Flutter",
     "Figma",
-    "Redux",
+    "React Native",
+    "Java",
+    "Kotlin",
+    "AWS",
+    "Azure",
+    "Docker",
+    "System Design",
+
+
+    
   ];
 
   return (

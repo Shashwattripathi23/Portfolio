@@ -55,21 +55,23 @@ export default function Combined({
   };
 
   const techStack = [
-    "React",
+    "ReactJS",
+    "NextJS",
     "TypeScript",
-    "Node.js",
-    "Next.js",
-    "Tailwind CSS",
-    "MongoDB",
-    "Express",
-    "Git",
-    "JavaScript",
     "Python",
-    "PostgreSQL",
-    "Docker",
-    "AWS",
+    "Django",
+    "NodeJS",
+    "GraphQL",
+    "Flutter",
     "Figma",
-    "Redux",
+    "React Native",
+    "Java",
+    "Kotlin",
+    "AWS",
+    "Azure",
+    "Docker",
+    "System Design"
+    
   ];
 
   const socialss = [
