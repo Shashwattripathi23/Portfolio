@@ -418,12 +418,12 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
 
             {/* Stand — neck */}
             <div 
-              className="absolute -bottom-[96px] left-1/2 -translate-x-1/2 w-32 h-[120px] bg-gradient-to-b from-[#1a1a1c] to-[#0a0a0c] border-x border-[#222]"
+              className="absolute -bottom-[96px] left-1/2 -ml-12 -translate-x-1/2 w-32 h-[120px] bg-gradient-to-b from-[#1a1a1c] to-[#0a0a0c] border-x border-[#222]"
               style={{ transformOrigin: 'top center', transform: 'rotateX(-15deg) translateZ(-10px)' }} 
             />
             {/* Stand — base */}
             <div 
-              className="absolute -bottom-[120px] left-1/2 -translate-x-1/2 w-64 h-[200px] bg-gradient-to-br from-[#111] to-[#050505] rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.9)] border-t border-[#222]"
+              className="absolute -bottom-[120px] left-1/2 -ml-20 -translate-x-1/2 w-64 h-[200px] bg-gradient-to-br from-[#111] to-[#050505] rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.9)] border-t border-[#222]"
               style={{ transformOrigin: 'center', transform: 'rotateX(80deg) translateZ(-60px) translateY(20px)' }} 
             />
           </div>
