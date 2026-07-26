@@ -6,6 +6,7 @@ import ProjectCarousel from "./ProjectCarousel";
 import ProjectImageCarousel from "./ProjectImageCarousel";
 import SocialCanvas from "./SocialCanvas";
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import Monitor from "./Monitor";
 
 import StickmanRagdoll from "./Stickman";
 interface Project {
@@ -190,7 +191,7 @@ export default function Combined({
       ref={containerRef}
       className=" bg-transparent flex items-center justify-center z-2 "
     >
-      <div className="min-h-[95vh] py-10 w-11/12 flex flex-row px-8 text-center bg-transparent relative overflow-hidden">
+      <div className="min-h-[95vh] py-10 w-11/12 flex flex-row px-8 text-center bg-transparent relative overflow-visible">
         <div className="h-flex-1 bg-transparent w-2/3 border-gray-300 flex flex-col relative">
           <div
             style={{ transform: blueBoxTransform }}
@@ -229,13 +230,11 @@ export default function Combined({
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold uppercase font-roboto text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/20 text-left">
-                {projectDetailOpen ? "" : "Selected Works"}
+                {/* {projectDetailOpen ? "" : "Selected Works"} */}
               </h3>
             </div>
-            <div className="h-full  w-full">
-              <ProjectCarousel
-                projects={projects}
-                onProjectClick={handleProjectClick}
+            <div className="h-full w-full  border-2-white">
+              <Monitor
                 state={
                   scrollProgress > 0.5
                     ? projectDetailOpen
@@ -243,6 +242,7 @@ export default function Combined({
                       : "expand"
                     : "hero"
                 }
+                onHeroClick={() => scrollToSection(1.0)}
               />
             </div>
           </div>
@@ -413,7 +413,7 @@ export default function Combined({
             className="flex-1 bg- linear-to-br from-red-950 via-red-900 to-red-950 w-1/3 transition-transform duration-700 ease-out relative"
           >
             {/* <ProceduralMan3D /> */}
-            <StickmanRagdoll />
+            {/* <StickmanRagdoll /> */}
 
             {/* Subtle texture overlay */}
           </div>

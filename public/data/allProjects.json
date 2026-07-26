@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Shashwattripathi23",
+    "description": "This is the special GitHub profile README repository tied directly to the account username, which GitHub renders as the bio/landing section at the top of the profile page. It presents a structured introduction \u2014 job title, an 'About' blurb describing experience across cloud automation, healthcare platforms, and real-time communication infrastructure, a table of four featured projects (Self-Driving Car Simulation, Ragnarok RAG Study Agent, ProcessDistro, and Kozeo), and a tech-stack table covering languages, frameworks, cloud/data tools, and dev tooling. It effectively functions as a personal portfolio landing page written in Markdown.",
+    "tags": [
+      "github-profile",
+      "readme",
+      "portfolio",
+      "markdown"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Shashwattripathi23",
+    "thumbnail": ""
+  },
+  {
+    "name": "Desktop-Assistant-",
+    "description": "A command-line desktop assistant that pairs a local Ollama-hosted language model (e.g. qwen2.5-coder:7b) with a simple agent loop: it takes a natural-language request through a REPL, decides whether it's small talk or an actionable task, and for tasks, has the model generate Python code inside a 'tool block.' The app then executes that code locally, feeds the output back to the model so it can decide whether to continue or finish, and repeats until the task is done. This lets it handle open-ended desktop commands \u2014 opening applications, running shell commands, browsing URLs, listing or searching files \u2014 without hand-coding a handler for every possible request, making it a small, educational demonstration of a tool-use/reasoning agent loop built entirely on local infrastructure.",
+    "tags": [
+      "python",
+      "ollama",
+      "llm-agent",
+      "automation",
+      "cli",
+      "tool-use"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Desktop-Assistant-",
+    "thumbnail": ""
+  },
+  {
+    "name": "automailer",
+    "description": "A Python automation script for sending outbound emails through the Gmail API rather than SMTP. Setup involves enabling the Gmail API in Google Cloud, creating an OAuth consent screen, and registering the correct redirect URLs for both the app and the local UI, after which the script authenticates via OAuth and dispatches messages programmatically. It's built as a reusable piece of infrastructure for automated outreach or notification workflows rather than a one-off script.",
+    "tags": [
+      "python",
+      "gmail-api",
+      "oauth",
+      "email-automation",
+      "outreach"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/automailer",
+    "thumbnail": ""
+  },
+  {
+    "name": "Pippo-Bot",
+    "description": "A Python bot project (the repository's single top-level folder is literally named 'pippo-bot-main', suggesting it started from a downloaded bot template/starter kit named 'Pippo'). No README or public description accompanies the code, so the exact messaging platform and feature set aren't documented, but the naming and structure point to an automated chat/task bot built on a common Python bot framework.",
+    "tags": [
+      "python",
+      "bot",
+      "automation",
+      "chatbot"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Pippo-Bot",
+    "thumbnail": ""
+  },
+  {
+    "name": "Object-Tracking-Robot",
+    "description": "A Python project (contained in a single 'robot' folder) for a robot that visually detects and follows a target object in real time. It combines computer-vision logic \u2014 most likely OpenCV-based detection/tracking \u2014 with motor or actuator control code to translate the tracked object's position into physical movement commands, bridging perception and robotics control in one pipeline.",
+    "tags": [
+      "python",
+      "computer-vision",
+      "robotics",
+      "object-tracking",
+      "opencv"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Object-Tracking-Robot",
+    "thumbnail": ""
+  },
+  {
+    "name": "Recommender-Model",
+    "description": "A group coursework submission (folder named 'Group_23_Code') implementing a recommendation system model in Python. As a graded assignment repo it likely covers standard recommender-system techniques \u2014 data preprocessing, model training, and evaluation against a benchmark dataset \u2014 in the same academic vein as the author's other recommender-systems assignments (NCF, SASRec, TIGER).",
+    "tags": [
+      "python",
+      "recommender-systems",
+      "machine-learning",
+      "coursework",
+      "group-project"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Recommender-Model",
+    "thumbnail": ""
+  },
+  {
+    "name": "Transformer-Index-for-Generative-Recommenders",
+    "description": "A Jupyter Notebook assignment (folder 'tiger_assignment') implementing TIGER \u2014 Transformer Index for GEnerative Recommenders \u2014 a technique that represents items as discrete semantic ID tokens and uses a transformer decoder to autoregressively generate the next recommended item, rather than scoring a fixed candidate set the way traditional recommenders do. Built as part of a graduate-level recommender systems course.",
+    "tags": [
+      "jupyter-notebook",
+      "transformers",
+      "generative-recommenders",
+      "deep-learning",
+      "coursework",
+      "semantic-ids"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Transformer-Index-for-Generative-Recommenders",
+    "thumbnail": ""
+  },
+  {
+    "name": "SASrec",
+    "description": "A from-scratch implementation of SASRec (Self-Attentive Sequential Recommendation), built as 'Assignment 2' of a recommender-systems course. It includes a preprocessing script that builds fixed-length user interaction sequences at configurable lengths, a training script (train_sasrec.py) exposing a full set of CLI hyperparameters \u2014 batch size, epochs, learning rate, number of transformer blocks/attention heads, dropout, early-stopping patience, device selection (CUDA/MPS/CPU) \u2014 plus a dedicated ablation-study runner (run_ablations.sh) that logs results to CSV and a plotting script for visualizing training curves. The thoroughness of the tooling (ablations, plotting, configurable architecture) suggests this went beyond a minimal assignment submission into a small research-style experimentation harness.",
+    "tags": [
+      "python",
+      "sequential-recommendation",
+      "self-attention",
+      "transformers",
+      "deep-learning",
+      "coursework",
+      "ablation-study"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/SASrec",
+    "thumbnail": ""
+  },
+  {
+    "name": "Neural-Collaborative-Filtering",
+    "description": "A complete Neural Collaborative Filtering (NCF) pipeline trained and evaluated on the MovieLens 1M dataset, submitted as 'Assignment 1' of a recommender-systems course. The pipeline is split into three stages: data_preprocess.py converts explicit 1-5 star ratings into implicit interactions (rating >= 4 -> positive), performs a 70/15/15 per-user train/val/test split, and injects 4 negative samples per positive interaction; model.py defines a hybrid GMF + MLP NCF architecture trained with binary cross-entropy loss and early stopping on validation loss, checkpointing the best model; and evaluation.py runs Optuna-based hyperparameter search and reports full-ranking Recall@10 and NDCG@10 on the held-out test set, saving both the tuning results and a convergence plot. All scripts auto-detect CUDA and fall back to CPU.",
+    "tags": [
+      "python",
+      "neural-collaborative-filtering",
+      "recommender-systems",
+      "movielens",
+      "deep-learning",
+      "pytorch",
+      "hyperparameter-tuning",
+      "optuna"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Neural-Collaborative-Filtering",
+    "thumbnail": ""
+  },
+  {
+    "name": "Q-Learning",
+    "description": "A reinforcement-learning coursework repo (folder 'Q-Learning_Tabular_and_Deep-master') implementing both classical tabular Q-learning, which maintains an explicit table of state-action values, and its function-approximation successor, deep Q-learning (DQN), which uses a neural network to estimate Q-values for larger or continuous state spaces - likely benchmarked against the same control environments used elsewhere in the author's RL assignments.",
+    "tags": [
+      "python",
+      "reinforcement-learning",
+      "q-learning",
+      "deep-q-network",
+      "deep-learning",
+      "coursework"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Q-Learning",
+    "thumbnail": ""
+  },
+  {
+    "name": "AC---Cartpole",
+    "description": "A reinforcement-learning assignment (folder 'REINFORCE-and-Actor-Critic-on-Cartpole-main') implementing two classic policy-gradient algorithms - REINFORCE (a Monte Carlo policy-gradient method) and Actor-Critic (which adds a learned value function to reduce variance) - both applied to the CartPole balancing control task, likely as a comparative study of the two approaches' sample efficiency and stability.",
+    "tags": [
+      "python",
+      "reinforcement-learning",
+      "actor-critic",
+      "reinforce",
+      "policy-gradient",
+      "cartpole",
+      "coursework"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/AC---Cartpole",
+    "thumbnail": ""
+  },
+  {
+    "name": "ppo---cartpole",
+    "description": "A Proximal Policy Optimization (PPO) implementation for the CartPole environment, structured as train.py (which saves metrics to results/ppo_results.json) and plot_results.py (which automatically overlays PPO's learning curve against prior baseline runs - DQN, A2C, etc. - from earlier assignments if their result JSONs are dropped into the same results folder). This makes it a comparative benchmarking tool across the author's series of RL algorithm implementations on the same control task rather than a standalone PPO demo.",
+    "tags": [
+      "python",
+      "reinforcement-learning",
+      "ppo",
+      "cartpole",
+      "benchmarking",
+      "coursework"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/ppo---cartpole",
+    "thumbnail": ""
+  },
+  {
+    "name": "satvikyogaui",
+    "description": "The React frontend (bootstrapped with Create React App) for a web application built for 'Satvik Yoga.' It pairs with the separate satvikyogabackend repo to form the client half of what is most likely a yoga studio or wellness-brand web presence - booking, class info, or content delivery - running on the standard CRA dev/build toolchain (npm start / npm test / npm run build).",
+    "tags": [
+      "javascript",
+      "react",
+      "frontend",
+      "create-react-app",
+      "wellness"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/satvikyogaui",
+    "thumbnail": ""
+  },
+  {
+    "name": "Job-Machine",
+    "description": "A Python-based end-to-end job-search automation pipeline, organized into clearly separated modules: db (persistence layer), intake (resume ingestion/parsing), matching (keyword-overlap scoring between resume content and job postings), discovery (pulling job listings, e.g. via Greenhouse/Lever public APIs or manual CSV import for LinkedIn/Naukri/Indeed), outreach (recruiter contact discovery and templated email generation/sending), pipeline (orchestration tying the stages together), uploads (input file storage), and web (a Flask dashboard for monitoring the whole process). The system was deliberately built to run on SQL Server Express with Windows Authentication and to avoid paid LLM APIs entirely, relying instead on plain-text extraction, keyword matching, and fixed email templates so the whole pipeline can run within free-tier limits.",
+    "tags": [
+      "python",
+      "flask",
+      "automation",
+      "job-search",
+      "resume-parsing",
+      "sql-server",
+      "pipeline",
+      "recruiter-outreach"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Job-Machine",
+    "thumbnail": ""
+  },
+  {
+    "name": "ragnarok-Hackathon",
+    "description": "A hackathon 'starter baseline' (built to be extended within a 3.5-hour timebox) for a RAG-based AI study assistant that turns raw university course files into a chat-driven study companion. It's structured around three files: app.py, a Streamlit frontend that handles the chat UI and document-loading sidebar; agent.py, the 'brain' that connects to the Groq API and manages prompts to the LLM; and document_parser.py, which extracts and chunks course materials for retrieval. Suggested hackathon extensions included parsing Jupyter notebooks and .mat files, building smarter chunking so the LLM's context window isn't overwhelmed, adding a relevance-search step instead of stuffing the whole course into context, and tailoring the system prompt to act as a quiz-master or flashcard generator - with an explicit hackathon rule to keep the tool aimed at helping students learn rather than answering graded work outright.",
+    "tags": [
+      "python",
+      "rag",
+      "llm",
+      "streamlit",
+      "groq-api",
+      "hackathon",
+      "study-assistant"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/ragnarok-Hackathon",
+    "thumbnail": ""
+  },
+  {
+    "name": "Self-Driving-Car-Simulation",
+    "description": "A from-scratch PPO (Proximal Policy Optimization) reinforcement-learning engine built with NumPy only - no PyTorch/TensorFlow - including custom Actor-Critic MLPs, manually implemented backpropagation, and Generalized Advantage Estimation (GAE), paired with a self-built 2D Pygame physics simulator (car.py, environment.py, map_reader.py). The agent was trained for roughly 15,000 episodes to learn to steer a simulated car around track turns while avoiding collisions, with model.py defining the network, training.json/first.json/second.json/circle.json holding track or run configuration data, and dashboard.py providing a visualization/monitoring layer for training progress.",
+    "tags": [
+      "python",
+      "reinforcement-learning",
+      "ppo",
+      "actor-critic",
+      "pygame",
+      "self-driving-simulation",
+      "numpy",
+      "from-scratch"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Self-Driving-Car-Simulation",
+    "thumbnail": ""
+  },
+  {
+    "name": "Lecture-Search-Engine",
+    "description": "A Python-built semantic search engine over a personal collection of lecture notes. ingest.py builds a search index from the raw notes (persisted to search_engine.pkl/index.pkl alongside a metadata.json describing the indexed documents), app.py exposes the query interface, and search.py handles the actual retrieval logic - effectively a small information-retrieval system letting the author quickly find relevant lecture content by topic or keyword instead of manually scanning notes.",
+    "tags": [
+      "python",
+      "search-engine",
+      "information-retrieval",
+      "nlp",
+      "indexing"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Lecture-Search-Engine",
+    "thumbnail": ""
+  },
+  {
+    "name": "Portfolio",
+    "description": "A personal portfolio website concept and implementation guide for a 'Bento-style,' scroll-less design where the page itself never scrolls - instead, mouse-wheel input is intercepted and used to trigger container-level transitions between four staged sections: a Hero section (intro, nav, a mini project gallery preview, and a large hero visual), a Project Gallery with internally-scrollable project cards, a Project Expanded View triggered on click (a carousel with thumbnails and a sliding description panel), and an About + Socials section. Motion is driven by transform/opacity/clip-path animations via Framer Motion (with Next.js + Tailwind CSS as the suggested stack), with the README documenting exact animation timings, easing curves, and a recommended component/file structure, plus stretch goals like a Three.js hero model and parallax glow effects.",
+    "tags": [
+      "typescript",
+      "nextjs",
+      "portfolio",
+      "web-design",
+      "framer-motion",
+      "animation",
+      "frontend",
+      "tailwindcss"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Portfolio",
+    "thumbnail": ""
+  },
+  {
+    "name": "NirogyaSaathi",
+    "description": "A JavaScript frontend application (folder 'Frontend', deployed live on Vercel) for 'Nirogya Saathi' - a name that translates roughly to 'health companion' - pointing to a healthcare or wellness-focused web app, likely offering some form of health tracking, guidance, or patient-facing tooling given the naming convention and the author's stated background building healthcare platforms.",
+    "tags": [
+      "javascript",
+      "frontend",
+      "healthcare",
+      "wellness",
+      "vercel"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/NirogyaSaathi",
+    "thumbnail": ""
+  },
+  {
+    "name": "satvikyogabackend",
+    "description": "The Node.js backend service (deployed live on Vercel) supporting the 'Satvik Yoga' application, pairing with the separate satvikyogaui frontend repo. As a minimal Node project (index.js, package.json) it most likely exposes a small REST/API layer for whatever data the yoga-brand frontend needs - class schedules, content, or booking data.",
+    "tags": [
+      "javascript",
+      "nodejs",
+      "backend",
+      "vercel",
+      "api"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/satvikyogabackend",
+    "thumbnail": ""
+  },
+  {
+    "name": "ProcessDistro",
+    "description": "An ambitiously-scoped distributed execution framework for LAN environments, written in Rust, that turns a group of local machines into a lightweight computing cluster. A master/controller node splits compute-heavy jobs (matrix multiplication, bulk password hashing, Mandelbrot fractal rendering) into WebAssembly-compilable subtasks and distributes them to edge-node workers, which execute the subtasks inside sandboxed, resource-limited WASM runtimes and report results back. The documented architecture includes dynamic work-stealing for load balancing, automatic fault-tolerant task reassignment, ephemeral-token node authentication, real-time Prometheus-style metrics, and a documented (if partially aspirational) roadmap from basic controller/edge communication through a v1.0 production release - built on tokio for async networking and serde for serialization, with modular controller/, edge_node/, common/, and wasm_tasks/ crates.",
+    "tags": [
+      "rust",
+      "distributed-computing",
+      "webassembly",
+      "edge-computing",
+      "websocket",
+      "fault-tolerance",
+      "wasm-sandboxing"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/ProcessDistro",
+    "thumbnail": ""
+  },
+  {
+    "name": "StillAlive-Website",
+    "description": "A Next.js (TypeScript) marketing/landing website whose purpose is to let visitors download the 'Still Alive' app, built on the standard create-next-app scaffold with the Geist font and structured for deployment on Vercel.",
+    "tags": [
+      "typescript",
+      "nextjs",
+      "website",
+      "landing-page",
+      "vercel"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/StillAlive-Website",
+    "thumbnail": ""
+  },
+  {
+    "name": "Kozeo-Whiteboard",
+    "description": "An empty repository (no code has been pushed yet) reserved for a personalized fork/replica of the tldraw whiteboard SDK, intended to carry custom changes for the 'Kozeo' collaborative whiteboard product referenced elsewhere in the author's profile (which describes a full-stack Kozeo profile-building platform with real-time WebRTC collaboration). Currently a placeholder for planned work.",
+    "tags": [
+      "whiteboard",
+      "tldraw",
+      "planned-project",
+      "placeholder"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Kozeo-Whiteboard",
+    "thumbnail": ""
+  },
+  {
+    "name": "tldraw",
+    "description": "A forked copy of tldraw, the popular open-source React SDK/library for building infinite-canvas whiteboard experiences (the software that powers tldraw.com). This is upstream open-source code rather than original work by the account owner, most likely kept as a reference or starting point for the related Kozeo-Whiteboard customization project.",
+    "tags": [
+      "typescript",
+      "fork",
+      "whiteboard-sdk",
+      "react",
+      "open-source",
+      "infinite-canvas"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/tldraw",
+    "thumbnail": ""
+  },
+  {
+    "name": "MemoLens-Web",
+    "description": "A React web application (bootstrapped with Create React App) for a product called 'MemoLens.' The naming implies a memory- or notes-focused tool - potentially a flashcard, note-capture, or visual-memory aid app - built on the standard CRA dev toolchain.",
+    "tags": [
+      "javascript",
+      "react",
+      "frontend",
+      "create-react-app",
+      "notes"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/MemoLens-Web",
+    "thumbnail": ""
+  },
+  {
+    "name": "MoveInBuddy",
+    "description": "A React + Vite web application for 'MoveInBuddy,' whose name points to an assistant tool for people relocating or moving into a new home - likely covering things like moving checklists, task tracking, or logistics guidance. Built on Vite for fast dev-server HMR rather than CRA.",
+    "tags": [
+      "javascript",
+      "react",
+      "vite",
+      "frontend",
+      "relocation"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/MoveInBuddy",
+    "thumbnail": ""
+  },
+  {
+    "name": "Drive-File-Update-Script",
+    "description": "A focused Python utility script that automatically updates the contents of a file already stored on Google Drive while preserving its existing shareable link and file ID - meaning downstream users who have the link never need a new URL when the underlying file (PDF, DOCX, image, etc.) changes. It authenticates via a Google Cloud service account (shared Editor access to the target file), reads local credentials/config from a git-ignored keys.py, and calls the Google Drive API to perform an in-place file replacement rather than uploading a new file.",
+    "tags": [
+      "python",
+      "google-drive-api",
+      "automation",
+      "script",
+      "service-account"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Drive-File-Update-Script",
+    "thumbnail": ""
+  },
+  {
+    "name": "React-Native-Notification-handler",
+    "description": "A two-part project pairing a React Native mobile client ('Frontend') with a companion backend server for managing and delivering push notifications to the app - i.e. the server side handles sending/triggering notifications while the mobile app handles receiving, displaying, and reacting to them.",
+    "tags": [
+      "javascript",
+      "react-native",
+      "notifications",
+      "mobile",
+      "backend",
+      "push-notifications"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/React-Native-Notification-handler",
+    "thumbnail": ""
+  },
+  {
+    "name": "Shagen",
+    "description": "A shared UI component library split into parallel 'React' and 'React Native' folders, designed to provide the same set of reusable components across both a web app and its mobile counterpart - a common pattern for keeping design language consistent when building parallel web/mobile products without duplicating component logic entirely.",
+    "tags": [
+      "javascript",
+      "react",
+      "react-native",
+      "component-library",
+      "ui",
+      "cross-platform"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Shagen",
+    "thumbnail": ""
+  },
+  {
+    "name": "GraphQL-Login-page",
+    "description": "A login page implementation backed by a GraphQL API (server.js, Node.js) with MongoDB as the user-data store, structured as a small full-stack authentication demo - a public-facing HTML page that talks to a GraphQL resolver layer for user registration/login rather than a traditional REST endpoint.",
+    "tags": [
+      "graphql",
+      "mongodb",
+      "nodejs",
+      "authentication",
+      "html",
+      "full-stack"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/GraphQL-Login-page",
+    "thumbnail": ""
+  },
+  {
+    "name": "github-readme-stats",
+    "description": "A forked copy of the widely-used open-source project (originally by Anurag Hazra) that dynamically generates GitHub statistics cards - commit counts, top languages, star totals, and similar metrics - for embedding in profile READMEs. This is upstream community code, not original work, kept likely as a reference or for local customization.",
+    "tags": [
+      "javascript",
+      "fork",
+      "github-readme",
+      "open-source",
+      "svg-generation"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/github-readme-stats",
+    "thumbnail": ""
+  },
+  {
+    "name": "Taps-Away-Foods",
+    "description": "A Django web application for food ordering, organized into dedicated apps for items (menu/catalog), login (user authentication), and payments (checkout/transaction handling), with a top-level TAF app tying the project together and a SQLite database (db.sqlite3) for local development/storage.",
+    "tags": [
+      "python",
+      "django",
+      "food-ordering",
+      "web-app",
+      "sqlite",
+      "e-commerce"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Taps-Away-Foods",
+    "thumbnail": ""
+  },
+  {
+    "name": "Video-Conference-in-Django",
+    "description": "A Django-based web application (folder vc) implementing real-time video conferencing functionality - most likely combining Django's server-side routing/auth with WebRTC or a similar peer-to-peer media layer to let multiple users join and communicate in a shared video call from the browser.",
+    "tags": [
+      "python",
+      "django",
+      "video-conferencing",
+      "web-app",
+      "webrtc"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Video-Conference-in-Django",
+    "thumbnail": ""
+  },
+  {
+    "name": "Live-Streaming-Website",
+    "description": "A Django-based live streaming platform, split into a live app (handling stream sessions) and a stream app (handling the actual media/stream data), backed by a local SQLite database (db.sqlite3), providing the server-side foundation for a website where users can host or watch live video streams.",
+    "tags": [
+      "python",
+      "django",
+      "live-streaming",
+      "web-app",
+      "sqlite"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Live-Streaming-Website",
+    "thumbnail": ""
+  },
+  {
+    "name": "Interview-Prep-Buddy",
+    "description": "An early-stage concept repository for an interview-preparation tool, containing only a UI wireframe/blueprint image (Blueprint.png) and a sample question dataset (dataset.json) - essentially the planning artifacts for the idea before implementation began, later carried forward into the more developed Interview-Preparation-Buddy repo.",
+    "tags": [
+      "concept",
+      "interview-prep",
+      "dataset",
+      "wireframe"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Interview-Prep-Buddy",
+    "thumbnail": ""
+  },
+  {
+    "name": "Interview-Buddy",
+    "description": "A minimal scaffold/placeholder repository (containing only a bare title in its README) for what appears to be an earlier or parallel attempt at an interview-preparation assistant project, superseded by the more fully-built Interview-Preparation-Buddy.",
+    "tags": [
+      "concept",
+      "interview-prep",
+      "scaffold",
+      "placeholder"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Interview-Buddy",
+    "thumbnail": ""
+  },
+  {
+    "name": "Interview-Preparation-Buddy",
+    "description": "The more developed iteration of the interview-prep concept: a website (folder IPB) that helps a job candidate prepare for an interview by generating tailored guidance based on both their uploaded resume and the specific job posting/profile they're applying to - effectively matching candidate background against role requirements to produce targeted prep material, styled with plain CSS and carrying over the original Blueprint.png wireframe.",
+    "tags": [
+      "css",
+      "web-app",
+      "interview-prep",
+      "resume-matching",
+      "job-search"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Interview-Preparation-Buddy",
+    "thumbnail": ""
+  },
+  {
+    "name": "Rock-Paper-Scissor-Code",
+    "description": "A Python program that plays Rock-Paper-Scissors against the user via real-time hand-gesture recognition: it uses the Mediapipe library to detect and track hand landmarks through a webcam feed and OpenCV to handle video capture/display, interpreting the tracked hand shape as a rock/paper/scissors move and then choosing a counter-move to beat the player.",
+    "tags": [
+      "python",
+      "computer-vision",
+      "mediapipe",
+      "opencv",
+      "game",
+      "gesture-recognition"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Rock-Paper-Scissor-Code",
+    "thumbnail": ""
+  },
+  {
+    "name": "Pass-Safe-password-manager",
+    "description": "A secure password manager web application built with Django and a PostgreSQL database. It supports full user registration and authentication, lets users securely store and manage credentials for multiple online services, includes a built-in generator for creating strong, unique passwords, and provides standard CRUD-style management (view/edit/delete) over stored password entries - built on Python 3.x/Django 3.x with psycopg2 for the Postgres connection.",
+    "tags": [
+      "python",
+      "django",
+      "postgresql",
+      "password-manager",
+      "security",
+      "authentication"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Pass-Safe-password-manager",
+    "thumbnail": ""
+  },
+  {
+    "name": "Boring-Websitec-Clone",
+    "description": "A front-end clone of The Boring Company's marketing website, built primarily in CSS as a styling and layout practice project - replicating the visual design and structure of the original site rather than its backend functionality.",
+    "tags": [
+      "css",
+      "website-clone",
+      "frontend-practice",
+      "html"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/Boring-Websitec-Clone",
+    "thumbnail": ""
+  },
+  {
+    "name": "hacktoberfest2021",
+    "description": "A forked community repository used for participating in Hacktoberfest 2021, an annual month-long open-source event sponsored by DigitalOcean and GitHub. Contributors add implementations of data structures and algorithms in Java to the shared codebase as a way of making beginner-friendly open-source pull requests during the event; the project has since stopped accepting PRs as it was excluded from Hacktoberfest eligibility.",
+    "tags": [
+      "java",
+      "fork",
+      "hacktoberfest",
+      "data-structures",
+      "algorithms",
+      "open-source"
+    ],
+    "images": [],
+    "url": "https://github.com/Shashwattripathi23/hacktoberfest2021",
+    "thumbnail": ""
+  }
+]

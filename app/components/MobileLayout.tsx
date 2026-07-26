@@ -92,7 +92,7 @@ export default function MobileLayout({
               className="min-h-full flex flex-col relative"
             >
               {/* Text Content */}
-              <div className="flex-1 px-8 pt-20 flex flex-col justify-start z-10">
+              <div className="flex-1 px-8 pt-20 flex flex-col  justify-center z-10">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -103,16 +103,16 @@ export default function MobileLayout({
                     //     <p>Tap on the stickman to see some fun!</p>
                     //   </div>
                   }
-                  <h2 className="text-lg font-medium text-neutral-400 mb-2 tracking-wide uppercase text-sm">
+                  <h2 className="text-lg font-medium text-neutral-400 mb-2 text-center tracking-wide uppercase text-sm">
                     Hello,
                   </h2>
-                  <h1 className="text-5xl font-extrabold tracking-tighter text-white mb-4 leading-[1.1]">
+                  <h1 className="text-5xl font-extrabold text-center tracking-tighter text-white mb-4 leading-[1.1]">
                     I am <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-600">
                       Shashwat.
                     </span>
                   </h1>
-                  <p className="text-neutral-400 text-lg max-w-[80%] leading-relaxed">
+                  <p className="text-neutral-400 text-lg text-center max-w-[100%] leading-relaxed">
                     I build stuff for web and mobile.{" "}
                   </p>
                 </motion.div>
