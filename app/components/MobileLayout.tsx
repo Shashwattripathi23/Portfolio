@@ -149,15 +149,15 @@ export default function MobileLayout({
                 {/* Added overflow-hidden for text animation */}
                
              
-                {/* Subtext */}
-                {/* <motion.p
+                {/* Main text */}
+                <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.4 }}
-                  className="text-zinc-500 mt-3 md:text-base text-sm"
+                  className="text-zinc-500 mt-12 md:text-base text-lg text-center "
                 >
-                  Swipe to explore recent builds
-                </motion.p> */}
+                  Click on the monitor to expand projects
+                </motion.p>
               </div>
 
               <div className="h-full ml-4 flex items-center justify-center w-11/12 px-6">

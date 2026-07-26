@@ -182,7 +182,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
           e.stopPropagation();
           if (onProjectClick) onProjectClick(project);
         }}
-        className="flex flex-col items-center gap-1.5 p-2 rounded-xl group hover:bg-white/5 transition-colors pointer-events-auto cursor-pointer w-full"
+        className="flex flex-col items-center gap-1.5 p-2 rounded-xl group hover:bg-white/5 transition-colors cursor-pointer w-full"
       >
         <div className="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center overflow-hidden shrink-0 shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all">
           {imgSrc ? (
@@ -211,7 +211,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
           e.stopPropagation();
           if (onProjectClick) onProjectClick(project);
         }}
-        className="flex items-center gap-3 px-4 py-2 hover:bg-white/[0.03] transition-colors border-b border-zinc-800/40 group pointer-events-auto cursor-pointer"
+        className="flex items-center gap-3 px-4 py-2 hover:bg-white/[0.03] transition-colors border-b border-zinc-800/40 group cursor-pointer"
       >
         <span className="text-zinc-600 font-mono text-[10px] w-5 shrink-0">{String(idx + 1).padStart(2, '0')}</span>
         <div className="flex-1 min-w-0">
@@ -244,7 +244,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
           <span className="text-zinc-600 text-[11px]">— {filteredMlProjects.length} results</span>
         </div>
         {/* Filter row with left/right arrows */}
-        <div className="flex items-center gap-1 pointer-events-auto">
+        <div className="flex items-center gap-1">
           <button onClick={(e) => { e.stopPropagation(); scroll(mlFilterRef, 'left'); }} className="text-zinc-600 hover:text-zinc-300 transition-colors p-0.5">
             <svg width="8" height="10" viewBox="0 0 8 10" fill="none"><path d="M6 1L2 5l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
@@ -275,7 +275,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
         <span className="text-zinc-700 font-mono text-[10px] w-4">●</span>
       </div>
       {/* List with up/down arrow buttons */}
-      <div className="flex-1 flex flex-col min-h-0 relative pointer-events-auto">
+      <div className="flex-1 flex flex-col min-h-0 relative">
         <div ref={mlListRef} className="flex-1 overflow-y-hidden hide-scrollbar">
           {filteredMlProjects.map((project: any, idx: number) => (
             <MLProjectRow key={project.id || project.name} project={project} idx={idx} />
@@ -296,7 +296,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
   const FrontendContent = () => (
     <div className="w-full h-full bg-transparent flex flex-col">
       {/* App-store style header */}
-      <div className="border-b border-zinc-800 px-5 py-3 flex items-center justify-between shrink-0 pointer-events-auto">
+      <div className="border-b border-zinc-800 px-5 py-3 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2 shrink-0">
           {/* <div className="w-2 h-4 rounded-sm bg-gradient-to-b from-sky-400 to-violet-500" /> */}
           <h2 className="text-zinc-100 font-semibold text-sm tracking-wide">Development Projects</h2>
@@ -329,7 +329,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
       </div>
 
       {/* Grid with up/down arrow buttons */}
-      <div className="flex-1 flex flex-col min-h-0 relative pointer-events-auto">
+      <div className="flex-1 flex flex-col min-h-0 relative">
         <div ref={devListRef} className="flex-1 overflow-y-hidden hide-scrollbar p-4">
           <div className="grid grid-cols-4 bg-transarent gap-1">
             {filteredDevProjects.map((project: any) => (
@@ -356,9 +356,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
       
       {/* Background overlay that fades in when a layer is active */}
       <div 
-        className={`absolute inset-0 bg-black/80 backdrop-blur-sm z-40 transition-opacity duration-500 pointer-events-none ${
-          activeOverlay !== 'none' ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute inset-0 z-40 transition-opacity duration-500 pointer-events-none opacity-0`}
       />
 
       {/* --- MAIN 3D SCENE --- */}
@@ -436,8 +434,8 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
           <div 
             className={`absolute inset-0 rounded-2xl border-[16px] border-[#111113] bg-black shadow-[0_0_50px_rgba(0,0,0,0.9)] transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] pointer-events-none z-20`}
             style={{ 
-              transform: (activeOverlay === 'frontend' || activeOverlay === 'backend') ? 'translateZ(-100px) scale(0.9)' : 'translateZ(0px) scale(1)',
-              opacity: (activeOverlay === 'frontend' || activeOverlay === 'backend') ? 0 : 1,
+              transform: (activeOverlay !== 'none') ? 'translateZ(-100px) scale(0.9)' : 'translateZ(0px) scale(1)',
+              opacity: (activeOverlay !== 'none') ? 0.2 : 1,
               transformStyle: 'preserve-3d'
             }}
           >
