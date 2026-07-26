@@ -49,7 +49,7 @@ const DEFAULT_PROJECTS: ProjectData[] = [
   }
 ];
 
-export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHeroClick, onProjectClick }: MonitorProps) {
+export default function MobileMonitor({ projects = DEFAULT_PROJECTS, state = 'hero', onHeroClick, onProjectClick }: MonitorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
   const BASE_ROTATION_X = 5;
@@ -58,7 +58,6 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
   const [isExploded, setIsExploded] = useState(false);
   const [hoveredLayer, setHoveredLayer] = useState<'none' | 'frontend' | 'backend'>('none');
   const [activeOverlay, setActiveOverlay] = useState<'none' | 'frontend-prep' | 'frontend' | 'backend-prep' | 'backend'>('none');
-  const [isMobile, setIsMobile] = useState(false);
   
   const [devFilter, setDevFilter] = useState<string>('all');
   const [mlFilter, setMlFilter] = useState<string>('all');
@@ -93,13 +92,6 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
     if (filename.startsWith('http')) return filename; // already a full URL
     return `/assets/${filename}`;
   };
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const isHoveredRef = useRef(false);
 
@@ -331,7 +323,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
       {/* Grid with up/down arrow buttons */}
       <div className="flex-1 flex flex-col min-h-0 relative pointer-events-auto">
         <div ref={devListRef} className="flex-1 overflow-y-hidden hide-scrollbar p-4">
-          <div className="grid grid-cols-4 bg-transarent gap-1">
+          <div className="grid grid-cols-4 gap-1">
             {filteredDevProjects.map((project: any) => (
               <DevProjectCard key={project.id || project.name} project={project} />
             ))}
@@ -364,10 +356,8 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
       {/* --- MAIN 3D SCENE --- */}
       <div 
         className={`relative w-full max-w-[1200px] min-h-[500px] flex items-center justify-center transition-all duration-700 ease-in-out ${
-          state === 'hero' ? 'scale-[0.45] md:scale-[0.5] lg:scale-[0.55] xl:scale-[0.6] -mt-16 -ml-16 cursor-pointer' :
-          state === 'expand' ? 'scale-[0.7] md:scale-[0.85] lg:scale-[1] xl:scale-[1.05]' :
-          'scale-[0.45] md:scale-[0.5] lg:scale-[0.6]'
-        } ${activeOverlay !== 'none' ? 'z-50' : 'z-10'}`}
+          activeOverlay !== 'none' ? 'scale-[0.35] z-50' : 'scale-[0.4] sm:scale-[0.45] md:scale-[0.5] lg:scale-[0.6] z-10'
+        }`}
         // Dynamically disable perspective when overlay is active to allow 2D flattening
         style={{ perspective: activeOverlay !== 'none' ? 'none' : '2000px' }}
         onMouseEnter={handleMouseEnterContainer}
@@ -403,7 +393,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
             `}
             style={
               activeOverlay === 'backend' 
-              ? { transform: 'translateZ(40px) scale(1.7)', zIndex: 50 }
+              ? { transform: 'translateZ(40px) scale(1.6)', zIndex: 50 }
               : activeOverlay === 'backend-prep'
               ? { transform: 'translateZ(-250px) translateX(-450px) translateY(0px) scale(1.02)', zIndex: 50 }
               : activeOverlay.includes('frontend')
@@ -412,8 +402,9 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
             }
             onMouseEnter={() => isExploded && activeOverlay === 'none' && setHoveredLayer('backend')}
             onMouseLeave={() => isExploded && activeOverlay === 'none' && setHoveredLayer('none')}
-            onClick={() => {
+            onClick={(e) => {
               if (isExploded && activeOverlay === 'none') {
+                e.stopPropagation();
                 setActiveOverlay('backend-prep');
                 setTimeout(() => setActiveOverlay('backend'), 250);
               }
@@ -422,9 +413,9 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
             {activeOverlay === 'backend' && (
               <button 
                 onClick={(e) => closeOverlay(e, 'backend')} 
-                className="absolute top-[-18px] right-[-18px] z-[60] p-1.5 bg-zinc-900 hover:bg-zinc-700 rounded-full text-zinc-300 border border-zinc-700 transition-colors shadow-lg pointer-events-auto"
+                className="absolute top-[-18px] right-[-18px] z-[60] p-3 bg-zinc-900 hover:bg-zinc-700 rounded-full text-zinc-300 border border-zinc-700 transition-colors shadow-lg pointer-events-auto"
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-5 h-5" />
               </button>
             )}
             <div className={`w-full h-full overflow-hidden rounded-2xl ${activeOverlay === 'backend' ? 'pointer-events-auto' : 'pointer-events-none'}`}>
@@ -471,7 +462,7 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
             `}
             style={
               activeOverlay === 'frontend' 
-              ? { transform: 'translateZ(40px) scale(1.7)', zIndex: 50 }
+              ? { transform: 'translateZ(40px) scale(1.6)', zIndex: 50 }
               : activeOverlay === 'frontend-prep'
               ? { transform: 'translateZ(250px) translateX(60px) translateY(-250px) scale(1.07)', zIndex: 50 }
               : activeOverlay.includes('backend')
@@ -480,8 +471,9 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
             }
             onMouseEnter={() => isExploded && activeOverlay === 'none' && setHoveredLayer('frontend')}
             onMouseLeave={() => isExploded && activeOverlay === 'none' && setHoveredLayer('none')}
-            onClick={() => {
+            onClick={(e) => {
               if (isExploded && activeOverlay === 'none') {
+                e.stopPropagation();
                 setActiveOverlay('frontend-prep');
                 setTimeout(() => setActiveOverlay('frontend'), 250);
               }
@@ -490,9 +482,9 @@ export default function App({ projects = DEFAULT_PROJECTS, state = 'hero', onHer
             {activeOverlay === 'frontend' && (
               <button 
                 onClick={(e) => closeOverlay(e, 'frontend')} 
-                className="absolute top-[-18px] right-[-18px] z-[60] p-1.5 bg-zinc-900 hover:bg-zinc-700 rounded-full text-zinc-300 border border-zinc-700 transition-colors shadow-lg pointer-events-auto"
+                className="absolute top-[-18px] right-[-18px] z-[60] p-3 bg-zinc-900 hover:bg-zinc-700 rounded-full text-zinc-300 border border-zinc-700 transition-colors shadow-lg pointer-events-auto"
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-5 h-5" />
               </button>
             )}
             <div className={`w-full h-full overflow-hidden rounded-2xl ${activeOverlay === 'frontend' ? 'pointer-events-auto' : 'pointer-events-none'}`}>

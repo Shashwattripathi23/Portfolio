@@ -6,6 +6,8 @@ import ProjectCarousel from "./ProjectCarousel";
 import StickmanRagdoll from "./Stickman";
 import SocialCanvas from "./SocialCanvas";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import MobileMonitor from "./MobileMonitor";
+import Monitor from "./Monitor";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -145,61 +147,25 @@ export default function MobileLayout({
               <div className="px-8 overflow-hidden">
                 {" "}
                 {/* Added overflow-hidden for text animation */}
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    visible: { transition: { staggerChildren: 0.05 } },
-                  }}
-                  className="overflow-hidden" // Prevents initial slide-in from overflowing
-                >
-                  <motion.h3
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.5, ease: "easeOut" },
-                      },
-                    }}
-                    className="text-5xl md:text-6xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60 leading-none"
-                  >
-                    Selected
-                  </motion.h3>
-                  <motion.h3
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: {
-                          duration: 0.5,
-                          ease: "easeOut",
-                          delay: 0.1,
-                        },
-                      },
-                    }}
-                    className="text-5xl md:text-6xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/70 to-white/40 leading-none"
-                  >
-                    Works
-                  </motion.h3>
-                </motion.div>
+               
+             
                 {/* Subtext */}
-                <motion.p
+                {/* <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.4 }}
                   className="text-zinc-500 mt-3 md:text-base text-sm"
                 >
                   Swipe to explore recent builds
-                </motion.p>
+                </motion.p> */}
               </div>
 
-              <div className="h-1/2 mt-12 overflow-x-hidden  flex items-center justify-center ">
-                <ProjectCarousel
-                  projects={projects}
+              <div className="h-full ml-4 flex items-center justify-center w-11/12 px-6">
+                <Monitor
+                  state="expand"
+                  projects={projects as any}
+                  onHeroClick={() => {}}
                   onProjectClick={onProjectClick}
-                  state="hero"
                 />
               </div>
             </motion.div>

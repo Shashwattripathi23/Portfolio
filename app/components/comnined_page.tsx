@@ -7,6 +7,7 @@ import ProjectImageCarousel from "./ProjectImageCarousel";
 import SocialCanvas from "./SocialCanvas";
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
 import Monitor from "./Monitor";
+import MobileMonitor from "./MobileMonitor";
 
 import StickmanRagdoll from "./Stickman";
 interface Project {
@@ -234,16 +235,32 @@ export default function Combined({
               </h3>
             </div>
             <div className="h-full w-full  border-2-white">
-              <Monitor
-                state={
-                  scrollProgress > 0.5
-                    ? projectDetailOpen
-                      ? "collapse"
-                      : "expand"
-                    : "hero"
-                }
-                onHeroClick={() => scrollToSection(1.0)}
-              />
+              <div className="hidden md:block h-full w-full">
+                <Monitor
+                  state={
+                    scrollProgress > 0.5
+                      ? projectDetailOpen
+                        ? "collapse"
+                        : "expand"
+                      : "hero"
+                  }
+                  onHeroClick={() => scrollToSection(1.0)}
+                  onProjectClick={handleProjectClick}
+                />
+              </div>
+              <div className="block md:hidden h-full w-full">
+                <MobileMonitor
+                  state={
+                    scrollProgress > 0.5
+                      ? projectDetailOpen
+                        ? "collapse"
+                        : "expand"
+                      : "hero"
+                  }
+                  onHeroClick={() => scrollToSection(1.0)}
+                  onProjectClick={handleProjectClick}
+                />
+              </div>
             </div>
           </div>
         </div>
