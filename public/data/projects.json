@@ -3,119 +3,302 @@
     {
       "id": 1,
       "name": "StillALive",
-      "description": "A real-time personal safety and digital check-in application designed to help users share live status updates, trigger personalized emergency notifications. Built with React Native and Firebase.",
+      "description": "A real-time personal safety and digital check-in app that lets users broadcast live status updates and trigger personalized emergency alerts to trusted contacts. Built end-to-end with React Native and Firebase (Firestore + FCM), covering real-time data sync, push notifications, and full-stack mobile architecture.",
       "url": "https://stillalive.vercel.app",
-      "tags": [
-        "React Native",
-        "Firebase",
-        "FCM",
-        "Full Stack Mobile"
-      ],
-      "images": [
-        "sa1.jpg",
-        "sa2.jpg",
-        "sa3.jpg",
-        "sa5.jpg",
-        "sa6.jpg",
-        "sa7.jpg"
-      ],
-      "thumbnail": "sathumb.png"
+      "tags": ["React Native", "Firebase", "FCM", "Full Stack Mobile"],
+      "images": ["sa1.jpg","sa2.jpg","sa3.jpg","sa4.jpg","sa5.jpg","sa6.jpg","sa7.jpg","sa8.jpg","sa9.png"],
+      "thumbnail": "sathumb.png",
+      "category": "Development Project",
+      "subCategory": "mobile-app"
     },
     {
       "id": 2,
       "name": "Kozeo",
-      "description": "A consumer-facing social and project collaboration platform that connects computer science students with real-world, paid projects to build verified experience, portfolios, and industry exposure.",
+      "description": "A social and project-collaboration platform connecting computer science students with real-world, paid projects to help them build verified experience, portfolios, and industry exposure. Designed and built full-stack as a project marketplace with social networking features, from onboarding to project matching.",
       "url": "https://kozeo.in",
-      "tags": [
-        "Full Stack",
-        "Startup Platform",
-        "Social Networking",
-        "Project Marketplace"
-      ],
-      "images": [
-        "kz1.png",
-        "kz2.png",
-        "kz3.png",
-        "kz4.png",
-        "kz5.png",
-        "kz6.png",
-        "kz8.png",
-        "kz9.png",
-        "kz10.png",
-        "kz11.png",
-        "kz12.png",
-        "kz13.png"
-      ],
-      "thumbnail": "kzlogo.png"
+      "tags": ["Full Stack", "Startup Platform", "Social Networking", "Project Marketplace"],
+      "images": ["kz1.png","kz2.png","kz3.png","kz4.png","kz5.png","kz6.png","kz8.png","kz9.png","kz10.png","kz11.png","kz12.png","kz13.png","kz14.png"],
+      "thumbnail": "kzlogo.png",
+      "category": "Development Project",
+      "subCategory": "web-app"
     },
     {
       "id": 3,
       "name": "NirogyaSaathi",
-      "description": "NirogyaSaathi is a doctor-facing digital healthcare management platform used to securely maintain patient records, manage outpatient (OPD) workflows, and generate digital prescriptions.",
+      "description": "A doctor-facing healthcare management platform for securely maintaining patient records, managing outpatient (OPD) workflows, and generating digital prescriptions. Built to streamline clinical operations with a strong focus on data security and usability for practicing physicians.",
       "url": "https://nirogya-saathi.vercel.app",
-      "tags": [
-        
-        "Healthcare Tech",
-        "Wellness Tracking",
-        "Patient Monitoring"
-      ],
-      "images": [
-        "ns1.png",
-        "ns2.png",
-        "ns3.png",
-        "ns4.png",
-        "ns5.png",
-        "ns6.png",
-        "ns7.png",
-        "ns8.png",
-        "ns9.png",
-        "ns10.png"
-      ],
-      "thumbnail": "nsnewlogo.jpg"
+      "tags": ["Healthcare Tech", "Wellness Tracking", "Patient Monitoring"],
+      "images": ["ns1.png","ns2.png","ns3.png","ns4.png","ns5.png","ns6.png","ns7.png","ns8.png","ns9.png","ns10.png"],
+      "thumbnail": "nsnewlogo.jpg",
+      "category": "Development Project",
+      "subCategory": "web-app"
     },
     {
       "id": 4,
       "name": "SatvikYoga",
-      "description": "SatvikYoga is a freelance project for a yoga studio where I built a fully responsive, visually calming website aligned with their brand identity, featuring service details and integrated video content for an engaging user experience.",
+      "description": "A freelance client project: a fully responsive, visually calming website for a yoga studio, built to match their brand identity and featuring integrated video content for an engaging user experience. Delivered end-to-end, from design system to deployment.",
       "url": "https://www.satvikyoga.nl",
-      "tags": [
-        "Freelance",
-        "Responsive Design",
-        "Brand Identity"
-        
-      
-      ],
-      "images": [
-        "sy1.png",
-        "sy2.png",
-        "sy3.png",
-        "sy5.png",
-        "sy6.png",
-        "sy7.png"
-      ],
-      "thumbnail": "sylogonew (1).jpg"
+      "tags": ["Freelance", "Responsive Design", "Brand Identity"],
+      "images": ["sy1.png","sy2.png","sy3.png","sy5.png","sy6.png","sy7.png"],
+      "thumbnail": "sylogonew (1).jpg",
+      "category": "Development Project",
+      "subCategory": "web-app"
     },
     {
       "id": 5,
       "name": "Voicle",
-      "description": "Voicle is a dating app that focuses primarily on audio profiles of users and workspace locations to connect people based on voice and proximity and match them based on shared interests and preferences.",
+      "description": "A freelance mobile dating app built around audio profiles instead of static photos, matching people by voice, proximity, and shared interests. Built with React Native for a client, covering audio capture/playback, location-based matching, and a polished mobile UX.",
       "url": "https://www.voicle.app/",
-      "tags": [
-        "Freelance",
-        "Mobile App",
-        "React Native"
-        
-      
-      ],
-      "images": [
-        "vc1.jpeg",
-        "vc2.jpeg",
-        "vc3.jpeg",
-        "vc4.jpeg",
-        "vc5.png"
-       
-      ],
-      "thumbnail": "vclogo.png"
+      "tags": ["Freelance", "Mobile App", "React Native"],
+      "images": ["vc1.jpeg","vc2.jpeg","vc3.jpeg","vc4.jpeg","vc5.png"],
+      "thumbnail": "vclogo.png",
+      "category": "Development Project",
+      "subCategory": "mobile-app"
+    },
+      {
+      "name": "Self-Driving Car Simulation",
+      "description": "A from-scratch PPO reinforcement-learning engine built with NumPy only - no PyTorch/TensorFlow - including hand-implemented Actor-Critic MLPs, manual backpropagation, and Generalized Advantage Estimation, paired with a self-built 2D Pygame physics simulator. Trained for roughly 15,000 episodes to steer a simulated car around track turns while avoiding collisions, with a custom dashboard for visualizing training progress.",
+      "tags": ["python", "reinforcement-learning", "ppo", "actor-critic", "pygame", "self-driving-simulation", "numpy", "from-scratch"],
+      "images": ["FS1.png","FS2.png","FS3.png","fs4.png"],
+      "url": "https://github.com/Shashwattripathi23/Self-Driving-Car-Simulation",
+      "thumbnail": "fs4.png",
+      "id": 21,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "Desktop Assistant",
+      "description": "A command-line AI agent I designed and built, pairing a local Ollama-hosted LLM (qwen2.5-coder:7b) with a reasoning loop of my own design: it parses natural-language requests, decides whether to chat or act, generates Python on the fly to execute the task, then feeds results back to itself until the task is complete. Handles open-ended desktop commands - opening apps, running shell commands, browsing URLs, searching files - entirely on local infrastructure, demonstrating a self-built tool-use/reasoning agent loop from scratch.",
+      "tags": ["python", "ollama", "llm-agent", "automation", "cli", "tool-use"],
+      "images": ["da1.png"],
+      "url": "https://github.com/Shashwattripathi23/Desktop-Assistant-",
+      "thumbnail": "",
+      "id": 7,
+      "category": "Machine Learning",
+      "subCategory": "llm-agent"
+    },
+     {
+      "name": "Ragnarok - RAG Study Assistant",
+      "description": "A RAG-based AI study assistant built at a hackathon, turning raw university course files into a chat-driven study companion. Structured around a Streamlit chat frontend, an agent layer connecting to the Groq API for prompt handling, and a document parser that extracts and chunks course materials for retrieval-augmented responses.",
+      "tags": ["python", "rag", "llm", "streamlit", "groq-api", "hackathon", "study-assistant"],
+      "images": ["RG1.png","RG2.png","RG4.png"],
+      "url": "https://github.com/Shashwattripathi23/ragnarok-Hackathon",
+      "thumbnail": "",
+      "id": 20,
+      "category": "Machine Learning",
+      "subCategory": "llm-agent"
+    },
+     {
+      "name": "Recommender Model",
+      "description": "A recommender-systems pipeline built for a Kaggle competition, implementing and comparing popularity, item-based CF (ItemKNN), content-based KNN (Sentence-T5 embeddings), BPR matrix factorization, LightGCN, and SASRec (Transformer-based sequential model) — with a final ensemble combining BPR and SASRec via Reciprocal Rank Fusion, weight-tuned on a temporal validation split to maximize Recall@10.",
+      "tags": ["python", "recommender-systems", "machine-learning"],
+      "images": ["rm.png"],
+      "url": "https://github.com/Shashwattripathi23/Recommender-Model",
+      "thumbnail": "",
+      "id": 11,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "Automailer",
+      "description": "A Python automation tool for sending outbound email through the Gmail API instead of SMTP, including full OAuth2 setup (Google Cloud console, consent screen, redirect URLs). Built as reusable infrastructure for automated outreach and notification workflows rather than a one-off script.",
+      "tags": ["python", "gmail-api", "oauth", "email-automation", "outreach"],
+      "images": ["automailer1.png","automailer2.png"],
+      "url": "https://github.com/Shashwattripathi23/automailer",
+      "thumbnail": "am1.png",
+      "id": 8,
+      "category": "Development Project",
+      "subCategory": "script"
+    },
+    {
+      "name": "Pippo Bot",
+      "description": "A Python-based automated chat/task bot built on a lightweight bot framework to handle conversational commands and automate repetitive tasks, with an emphasis on clean, extensible architecture for quickly adding new commands.",
+      "tags": ["python", "bot", "automation", "chatbot"],
+      "images": ["PP1.jpeg","PP2.jpeg","PP3.jpeg"],
+      "url": "https://github.com/Shashwattripathi23/Pippo-Bot",
+      "thumbnail": "",
+      "id": 9,
+      "category": "Machine Learning",
+      "subCategory": "robotics"
+    },
+    {
+      "name": "Object Tracking Robot",
+      "description": "A computer-vision-driven robot that visually detects and tracks a target object in real time, combining OpenCV-based detection with motor control to translate tracked position into physical movement. Built using a robotics kit as the hardware base, bridging perception and control in a single real-time pipeline.",
+      "tags": ["python", "computer-vision", "robotics", "object-tracking", "opencv"],
+      "images": ["OT1.jpeg","OT2.jpeg","OT3.jpeg"],
+      "url": "https://github.com/Shashwattripathi23/Object-Tracking-Robot",
+      "thumbnail": "",
+      "id": 10,
+      "category": "Machine Learning",
+      "subCategory": "robotics"
+    },
+   
+    {
+      "name": "TIGER: Transformer Index for Generative Recommenders",
+      "description": "An implementation of TIGER, where items are represented as discrete semantic ID tokens and a transformer decoder autoregressively generates the next recommended item, rather than scoring a fixed candidate set. Explores generative approaches to recommendation beyond traditional scoring-based methods.",
+      "tags": ["jupyter-notebook", "transformers", "generative-recommenders", "deep-learning", "semantic-ids"],
+      "images": ["tiger.png"],
+      "url": "https://github.com/Shashwattripathi23/Transformer-Index-for-Generative-Recommenders",
+      "thumbnail": "",
+      "id": 12,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "SASRec: Self-Attentive Sequential Recommendation",
+      "description": "A from-scratch implementation of SASRec, including a configurable preprocessing pipeline for building fixed-length user interaction sequences, a fully-parameterized training script (batch size, learning rate, transformer blocks/heads, dropout, early stopping, CUDA/MPS/CPU support), a dedicated ablation-study runner logging results to CSV, and automated training-curve plotting - a small research-style experimentation harness built well beyond a minimal implementation.",
+      "tags": ["python", "sequential-recommendation", "self-attention", "transformers", "deep-learning", "ablation-study"],
+      "images": ["sasrec.png"],
+      "url": "https://github.com/Shashwattripathi23/SASrec",
+      "thumbnail": "",
+      "id": 13,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "Neural Collaborative Filtering",
+      "description": "A complete Neural Collaborative Filtering (NCF) pipeline trained and evaluated on MovieLens 1M: converts explicit ratings into implicit interactions, performs a per-user train/val/test split with negative sampling, trains a hybrid GMF + MLP architecture with early stopping, and runs Optuna-based hyperparameter search reporting Recall@10 and NDCG@10 on held-out data. Fully PyTorch-based with automatic CUDA/CPU handling.",
+      "tags": ["python", "neural-collaborative-filtering", "recommender-systems", "movielens", "deep-learning", "pytorch", "optuna"],
+      "images": ["ncf.png"],
+      "url": "https://github.com/Shashwattripathi23/Neural-Collaborative-Filtering",
+      "thumbnail": "",
+      "id": 14,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "Q-Learning: Tabular & Deep",
+      "description": "A reinforcement-learning project implementing both classical tabular Q-learning and its function-approximation successor, deep Q-learning (DQN), benchmarked on standard control environments - spanning explicit state-action tables to neural-network-based value estimation.",
+      "tags": ["python", "reinforcement-learning", "q-learning", "deep-q-network", "deep-learning"],
+      "images": ["ql.png"],
+      "url": "https://github.com/Shashwattripathi23/Q-Learning",
+      "thumbnail": "",
+      "id": 15,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "Actor-Critic & REINFORCE on CartPole",
+      "description": "An implementation and comparison of two classic policy-gradient algorithms - REINFORCE (Monte Carlo policy gradients) and Actor-Critic (adding a learned value function to reduce variance) - applied to the CartPole balancing task to study sample efficiency and stability.",
+      "tags": ["python", "reinforcement-learning", "actor-critic", "reinforce", "policy-gradient", "cartpole"],
+      "images": ["ac.png"],
+      "url": "https://github.com/Shashwattripathi23/AC---Cartpole",
+      "thumbnail": "",
+      "id": 16,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "PPO on CartPole",
+      "description": "A Proximal Policy Optimization (PPO) implementation for CartPole, with training that logs metrics to JSON and a plotting script that automatically overlays PPO's learning curve against other RL baselines (DQN, A2C, etc.) - built as a benchmarking tool for comparing RL algorithms on the same control task.",
+      "tags": ["python", "reinforcement-learning", "ppo", "cartpole", "benchmarking"],
+      "images": ["ppo.png"],
+      "url": "https://github.com/Shashwattripathi23/ppo---cartpole",
+      "thumbnail": "",
+      "id": 17,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "Job Machine",
+      "description": "An end-to-end job-search automation pipeline in Python, cleanly modularized into resume parsing, keyword-based job matching, job discovery (Greenhouse/Lever APIs plus manual CSV import for LinkedIn/Naukri/Indeed), recruiter contact discovery, templated email outreach, pipeline orchestration, and a Flask monitoring dashboard. Deliberately architected to run entirely on free-tier infrastructure - SQL Server Express with Windows Authentication, no paid LLM APIs - proving out a full-stack automation system end to end.",
+      "tags": ["python", "flask", "automation", "job-search", "resume-parsing", "sql-server", "pipeline", "recruiter-outreach"],
+      "images": ["jm1.png"],
+      "url": "https://github.com/Shashwattripathi23/Job-Machine",
+      "thumbnail": "",
+      "id": 19,
+      "category": "Development Project",
+      "subCategory": "automation"
+    },
+   
+  
+    {
+      "name": "Lecture Search Engine",
+      "description": "A semantic search engine built in Python over a personal collection of lecture notes: an ingestion pipeline builds a searchable index with metadata, and a query interface handles fast topic/keyword retrieval - a compact information-retrieval system for finding relevant content instantly instead of manually scanning notes.",
+      "tags": ["python", "search-engine", "information-retrieval", "nlp", "indexing"],
+      "images": ["LS1.png","LS2.png","LS3.png"],
+      "url": "https://github.com/Shashwattripathi23/Lecture-Search-Engine",
+      "thumbnail": "",
+      "id": 22,
+      "category": "Machine Learning",
+      "subCategory": "ml"
+    },
+    {
+      "name": "ProcessDistro",
+      "description": "An ambitiously-scoped distributed execution framework for LAN environments, written in Rust, that turns a group of local machines into a lightweight compute cluster. A master/controller node splits compute-heavy jobs - matrix multiplication, bulk password hashing, Mandelbrot fractal rendering - into WebAssembly-compilable subtasks and distributes them to edge-node workers, which execute them inside sandboxed WASM environments with fault tolerance built in.",
+      "tags": ["rust", "distributed-computing", "webassembly", "edge-computing", "websocket", "fault-tolerance", "wasm-sandboxing"],
+      "images": ["PD1.png","pd2.png","pd3.jpeg","pd4.jpeg"],
+      "url": "https://github.com/Shashwattripathi23/ProcessDistro",
+      "thumbnail": "pdlogo.png",
+      "id": 26,
+      "category": "Development Project",
+      "subCategory": "distributed-systems"
+    },
+    {
+      "name": "MoveInBuddy",
+      "description": "A React + Vite web app assisting people relocating into a new home, providing moving checklists, task tracking, and logistics guidance to simplify the move-in process. Built on Vite for fast dev-server HMR and a snappy frontend experience.",
+      "tags": ["javascript", "react", "vite", "frontend", "relocation"],
+      "images": ["Mi1.png","mi2.png"],
+      "url": "https://github.com/Shashwattripathi23/MoveInBuddy",
+      "thumbnail": "mi2.png",
+      "id": 31,
+      "category": "Development Project",
+      "subCategory": "frontend"
+    },
+    {
+      "name": "Drive File Update Script",
+      "description": "A focused Python utility that automatically updates the contents of a file already stored on Google Drive while preserving its existing shareable link and file ID - so downstream users never need a new URL when the underlying file (PDF, DOCX, image, etc.) changes. Authenticates via a Google Cloud service account and calls the Drive API to perform an in-place file replacement rather than uploading a new file.",
+      "tags": ["python", "google-drive-api", "automation", "script", "service-account"],
+      "images": [],
+      "url": "https://github.com/Shashwattripathi23/Drive-File-Update-Script",
+      "thumbnail": "",
+      "id": 32,
+      "category": "Machine Learning",
+      "subCategory": "script"
+    },
+    {
+      "name": "Taps Away Foods",
+      "description": "A Django web application for food ordering, cleanly separated into dedicated apps for menu/catalog, user authentication, and checkout/payments. Built as a complete e-commerce flow with a SQLite backend for local development.",
+      "tags": ["python", "django", "food-ordering", "web-app", "sqlite", "e-commerce"],
+      "images": [],
+      "url": "https://github.com/Shashwattripathi23/Taps-Away-Foods",
+      "thumbnail": "taf1.png",
+      "id": 37,
+      "category": "Development Project",
+      "subCategory": "web-app"
+    },
+    {
+      "name": "Video Conferencing (Django)",
+      "description": "A Django-based real-time video conferencing web app, combining server-side routing and authentication with WebRTC for peer-to-peer video calls - letting multiple users join and communicate in a shared call directly from the browser.",
+      "tags": ["python", "django", "video-conferencing", "web-app", "webrtc"],
+      "images": [],
+      "url": "https://github.com/Shashwattripathi23/Video-Conference-in-Django",
+      "thumbnail": "vca1.png",
+      "id": 38,
+      "category": "Development Project",
+      "subCategory": "web-app"
+    },
+    {
+      "name": "Live Streaming Platform",
+      "description": "A Django-based live streaming platform split into dedicated stream-session and media-handling apps, backed by SQLite - providing the server-side foundation for hosting and watching live video streams.",
+      "tags": ["python", "django", "live-streaming", "web-app", "sqlite"],
+      "images": [],
+      "url": "https://github.com/Shashwattripathi23/Live-Streaming-Website",
+      "thumbnail": "lc1.png",
+      "id": 39,
+      "category": "Development Project",
+      "subCategory": "web-app"
+    },
+    {
+      "name": "Rock Paper Scissors (Gesture Recognition)",
+      "description": "A real-time Rock-Paper-Scissors game played via hand-gesture recognition: Mediapipe detects and tracks hand landmarks through a webcam feed, OpenCV handles video capture/display, and the tracked hand shape is interpreted as a move before the game picks a counter-move to win.",
+      "tags": ["python", "computer-vision", "mediapipe", "opencv", "game", "gesture-recognition"],
+      "images": [],
+      "url": "https://github.com/Shashwattripathi23/Rock-Paper-Scissor-Code",
+      "thumbnail": "",
+      "id": 43,
+      "category": "Machine Learning",
+      "subCategory": "computer-vision"
     }
   ]
 }

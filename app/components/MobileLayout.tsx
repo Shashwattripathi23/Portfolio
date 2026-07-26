@@ -6,6 +6,8 @@ import ProjectCarousel from "./ProjectCarousel";
 import StickmanRagdoll from "./Stickman";
 import SocialCanvas from "./SocialCanvas";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import MobileMonitor from "./MobileMonitor";
+import Monitor from "./Monitor";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -52,29 +54,32 @@ export default function MobileLayout({
 
   const [modalCliked, setModalClicked] = useState(false);
 
-  const sections = ["Home", "Projects", "Social"];
+  const sections = ["Home", "Projects", "Socials"];
   const oliveAccent = "#8b947f";
 
    const techStack = [
-    "ReactJS",
-    "NextJS",
-    "TypeScript",
     "Python",
-    "Django",
-    "NodeJS",
-    "GraphQL",
-    "Flutter",
-    "Figma",
+    "React",
     "React Native",
-    "Java",
-    "Kotlin",
-    "AWS",
-    "Azure",
-    "Docker",
-    "System Design",
-
-
-    
+    "JavaScript",
+    "Django",
+    "Flask",
+    "Rust",
+    "PyTorch",
+    "Firebase",
+    "WebRTC",
+    "SQLite",
+    "SQL Server",
+    "OpenCV",
+    "Vite",
+    "Machine Learning",
+    "Deep Learning",
+    "Reinforcement Learning",
+    "Computer Vision",
+    "NLP",
+    "RAG",
+    "LLM",
+    "Distributed Computing"
   ];
 
   return (
@@ -92,7 +97,7 @@ export default function MobileLayout({
               className="min-h-full flex flex-col relative"
             >
               {/* Text Content */}
-              <div className="flex-1 px-8 pt-20 flex flex-col justify-start z-10">
+              <div className="flex-1 px-8 pt-20 flex flex-col  justify-center z-10">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -103,17 +108,17 @@ export default function MobileLayout({
                     //     <p>Tap on the stickman to see some fun!</p>
                     //   </div>
                   }
-                  <h2 className="text-lg font-medium text-neutral-400 mb-2 tracking-wide uppercase text-sm">
+                  <h2 className="text-lg font-medium text-neutral-400 mb-2 text-center tracking-wide uppercase text-sm">
                     Hello,
                   </h2>
-                  <h1 className="text-5xl font-extrabold tracking-tighter text-white mb-4 leading-[1.1]">
+                  <h1 className="text-5xl font-extrabold text-center tracking-tighter text-white mb-4 leading-[1.1]">
                     I am <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-600">
-                      Shashwat.
+                      Shashwat
                     </span>
                   </h1>
-                  <p className="text-neutral-400 text-lg max-w-[80%] leading-relaxed">
-                    I build stuff for web and mobile.{" "}
+                  <p className="text-neutral-400 text-lg text-center max-w-[100%] leading-relaxed">
+                    I build stuff.{" "}
                   </p>
                 </motion.div>
               </div>
@@ -145,61 +150,25 @@ export default function MobileLayout({
               <div className="px-8 overflow-hidden">
                 {" "}
                 {/* Added overflow-hidden for text animation */}
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    visible: { transition: { staggerChildren: 0.05 } },
-                  }}
-                  className="overflow-hidden" // Prevents initial slide-in from overflowing
-                >
-                  <motion.h3
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.5, ease: "easeOut" },
-                      },
-                    }}
-                    className="text-5xl md:text-6xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/60 leading-none"
-                  >
-                    Selected
-                  </motion.h3>
-                  <motion.h3
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: {
-                          duration: 0.5,
-                          ease: "easeOut",
-                          delay: 0.1,
-                        },
-                      },
-                    }}
-                    className="text-5xl md:text-6xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/70 to-white/40 leading-none"
-                  >
-                    Works
-                  </motion.h3>
-                </motion.div>
-                {/* Subtext */}
+               
+             
+                {/* Main text */}
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.4 }}
-                  className="text-zinc-500 mt-3 md:text-base text-sm"
+                  className="text-zinc-500 mt-12 md:text-base text-lg text-center "
                 >
-                  Swipe to explore recent builds
+                  Click on the monitor to expand projects
                 </motion.p>
               </div>
 
-              <div className="h-1/2 mt-12 overflow-x-hidden  flex items-center justify-center ">
-                <ProjectCarousel
-                  projects={projects}
+              <div className="h-full ml-4 flex items-center justify-center w-11/12 px-6">
+                <Monitor
+                  state="expand"
+                  projects={projects as any}
+                  onHeroClick={() => {}}
                   onProjectClick={onProjectClick}
-                  state="hero"
                 />
               </div>
             </motion.div>
@@ -237,13 +206,7 @@ export default function MobileLayout({
                   {/* Paragraph 1: Key Skills */}
                   <motion.p variants={itemVariants}>
                     <p className="intro">
-                      Full-stack dev. I build stuff that works, looks good, and
-                      actually matters. I’m into{" "}
-                      <span className="highlight">smooth UI</span>,{" "}
-                      <span className="highlight">real-time systems</span>,{" "}
-                      <span className="highlight">modern web tech</span> turning
-                      ideas into products that bring me joy. For more of my
-                      backend and systems design work, check out my{" "}
+                      I'm a CS postgrad with an interest in building solid systems and architectures. I have built commercial apps and websites and have experience building AI agents. For source code of my backend and systems design work, check out my{" "}
                       <a
                         href="https://github.com/Shashwattripathi23"
                         target="_blank"

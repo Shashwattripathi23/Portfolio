@@ -13,6 +13,7 @@ interface Project {
   thumbnail: string;
   tags: string[];
   repo?: string;
+  category?: string;
 }
 
 interface ProjectDetailProps {
@@ -341,30 +342,34 @@ export default function ProjectDetail({
               animate="visible"
               className="p-6 md:p-8  border-white/5 bg-black/5 backdrop-blur-xl z-20"
             >
-              <div className="grid grid-cols-2 gap-4">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-white via-white/50 to-white/25  text-black font-semibold overflow-hidden transition-transform active:scale-95"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-white/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="relative z-10 flex items-center gap-2">
-                    Live Demo
-                    <svg
-                      className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </a>
+              <div className={`grid ${project.category === "Machine Learning" ? "grid-cols-1" : "grid-cols-2"} gap-4`}>
+                {project.category !== "Machine Learning" && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-white via-white/50 to-white/25  text-black font-semibold overflow-hidden transition-transform active:scale-95"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-white/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="relative z-10 flex items-center gap-2">
+                      Live Demo
+                      <svg
+                        className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </a>
+                )}
 
                 <a
-                  href={project.repo || "#"}
+                  href={project.category === "Machine Learning" ? project.url : (project.repo || "#")}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-4 rounded-xl bg-black/30 text-white font-medium border border-white/20 hover:bg-zinc-700 transition-colors active:scale-95"
                 >
                   <svg

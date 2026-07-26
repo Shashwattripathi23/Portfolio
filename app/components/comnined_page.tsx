@@ -6,6 +6,8 @@ import ProjectCarousel from "./ProjectCarousel";
 import ProjectImageCarousel from "./ProjectImageCarousel";
 import SocialCanvas from "./SocialCanvas";
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import Monitor from "./Monitor";
+import MobileMonitor from "./MobileMonitor";
 
 import StickmanRagdoll from "./Stickman";
 interface Project {
@@ -55,23 +57,28 @@ export default function Combined({
   };
 
   const techStack = [
-    "ReactJS",
-    "NextJS",
-    "TypeScript",
     "Python",
-    "Django",
-    "NodeJS",
-    "GraphQL",
-    "Flutter",
-    "Figma",
+    "React",
     "React Native",
-    "Java",
-    "Kotlin",
-    "AWS",
-    "Azure",
-    "Docker",
-    "System Design"
-    
+    "JavaScript",
+    "Django",
+    "Flask",
+    "Rust",
+    "PyTorch",
+    "Firebase",
+    "WebRTC",
+    "SQLite",
+    "SQL Server",
+    "OpenCV",
+    "Vite",
+    "Machine Learning",
+    "Deep Learning",
+    "Reinforcement Learning",
+    "Computer Vision",
+    "NLP",
+    "RAG",
+    "LLM",
+    "Distributed Computing"
   ];
 
   const socialss = [
@@ -190,7 +197,7 @@ export default function Combined({
       ref={containerRef}
       className=" bg-transparent flex items-center justify-center z-2 "
     >
-      <div className="min-h-[95vh] py-10 w-11/12 flex flex-row px-8 text-center bg-transparent relative overflow-hidden">
+      <div className="min-h-[95vh] py-10 w-11/12 flex flex-row px-8 text-center bg-transparent relative overflow-visible">
         <div className="h-flex-1 bg-transparent w-2/3 border-gray-300 flex flex-col relative">
           <div
             style={{ transform: blueBoxTransform }}
@@ -203,7 +210,7 @@ export default function Combined({
               I am Shashwat
             </h1>
             <p className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-white/80 via-white/60 to-white/30 mb-6 text-left font-roboto">
-              I build stuff for web and mobile.
+              I build stuff.
             </p>
           </div>
 
@@ -229,21 +236,36 @@ export default function Combined({
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold uppercase font-roboto text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/20 text-left">
-                {projectDetailOpen ? "" : "Selected Works"}
+                {/* {projectDetailOpen ? "" : "Selected Works"} */}
               </h3>
             </div>
-            <div className="h-full  w-full">
-              <ProjectCarousel
-                projects={projects}
-                onProjectClick={handleProjectClick}
-                state={
-                  scrollProgress > 0.5
-                    ? projectDetailOpen
-                      ? "collapse"
-                      : "expand"
-                    : "hero"
-                }
-              />
+            <div className="h-full w-full  border-2-white">
+              <div className="hidden md:block h-full w-full">
+                <Monitor
+                  state={
+                    scrollProgress > 0.5
+                      ? projectDetailOpen
+                        ? "collapse"
+                        : "expand"
+                      : "hero"
+                  }
+                  onHeroClick={() => scrollToSection(1.0)}
+                  onProjectClick={handleProjectClick}
+                />
+              </div>
+              <div className="block md:hidden h-full w-full">
+                <MobileMonitor
+                  state={
+                    scrollProgress > 0.5
+                      ? projectDetailOpen
+                        ? "collapse"
+                        : "expand"
+                      : "hero"
+                  }
+                  onHeroClick={() => scrollToSection(1.0)}
+                  onProjectClick={handleProjectClick}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -413,7 +435,7 @@ export default function Combined({
             className="flex-1 bg- linear-to-br from-red-950 via-red-900 to-red-950 w-1/3 transition-transform duration-700 ease-out relative"
           >
             {/* <ProceduralMan3D /> */}
-            <StickmanRagdoll />
+            {/* <StickmanRagdoll /> */}
 
             {/* Subtle texture overlay */}
           </div>
@@ -445,15 +467,9 @@ export default function Combined({
                 <div className="container">
                   <h1 className="name">Shashwat Tripathi</h1>
                   <p className="intro">
-                    Full-stack dev. I build stuff that works, looks good, and
-                    actually matters. I’m into{" "}
-                    <span className="highlight">smooth UI</span>,{" "}
-                    <span className="highlight">real-time systems</span>,{" "}
-                    <span className="highlight">modern web tech</span> turning
-                    ideas into products that bring me joy. For more of my
-                    backend and systems design work, check out my{" "}
+                    I'm a CS postgrad with an interest in building solid systems and architectures. I have built commercial apps and websites and have experience building AI agents. For source code of my backend and systems design work, check out my{" "}
                     <a
-                      href="https://github.com/yourusername"
+                      href="https://github.com/Shashwattripathi23"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative font-bold text-white inline-block after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-purple-400 after:to-pink-500 after:scale-x-0 after:origin-bottom-left after:transition-transform hover:after:scale-x-100"
