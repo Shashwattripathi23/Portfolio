@@ -435,7 +435,7 @@ export default function Combined({
             className="flex-1 bg- linear-to-br from-red-950 via-red-900 to-red-950 w-1/3 transition-transform duration-700 ease-out relative"
           >
             {/* <ProceduralMan3D /> */}
-            {/* <StickmanRagdoll /> */}
+            <StickmanRagdoll />
 
             {/* Subtle texture overlay */}
           </div>
