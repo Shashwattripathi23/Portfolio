@@ -54,29 +54,32 @@ export default function MobileLayout({
 
   const [modalCliked, setModalClicked] = useState(false);
 
-  const sections = ["Home", "Projects", "Social"];
+  const sections = ["Home", "Projects", "Socials"];
   const oliveAccent = "#8b947f";
 
    const techStack = [
-    "ReactJS",
-    "NextJS",
-    "TypeScript",
     "Python",
-    "Django",
-    "NodeJS",
-    "GraphQL",
-    "Flutter",
-    "Figma",
+    "React",
     "React Native",
-    "Java",
-    "Kotlin",
-    "AWS",
-    "Azure",
-    "Docker",
-    "System Design",
-
-
-    
+    "JavaScript",
+    "Django",
+    "Flask",
+    "Rust",
+    "PyTorch",
+    "Firebase",
+    "WebRTC",
+    "SQLite",
+    "SQL Server",
+    "OpenCV",
+    "Vite",
+    "Machine Learning",
+    "Deep Learning",
+    "Reinforcement Learning",
+    "Computer Vision",
+    "NLP",
+    "RAG",
+    "LLM",
+    "Distributed Computing"
   ];
 
   return (
@@ -111,11 +114,11 @@ export default function MobileLayout({
                   <h1 className="text-5xl font-extrabold text-center tracking-tighter text-white mb-4 leading-[1.1]">
                     I am <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-600">
-                      Shashwat.
+                      Shashwat
                     </span>
                   </h1>
                   <p className="text-neutral-400 text-lg text-center max-w-[100%] leading-relaxed">
-                    I build stuff for web and mobile.{" "}
+                    I build stuff.{" "}
                   </p>
                 </motion.div>
               </div>
@@ -203,13 +206,7 @@ export default function MobileLayout({
                   {/* Paragraph 1: Key Skills */}
                   <motion.p variants={itemVariants}>
                     <p className="intro">
-                      Full-stack dev. I build stuff that works, looks good, and
-                      actually matters. I’m into{" "}
-                      <span className="highlight">smooth UI</span>,{" "}
-                      <span className="highlight">real-time systems</span>,{" "}
-                      <span className="highlight">modern web tech</span> turning
-                      ideas into products that bring me joy. For more of my
-                      backend and systems design work, check out my{" "}
+                      I'm a CS postgrad with an interest in building solid systems and architectures. I have built commercial apps and websites and have experience building AI agents. For source code of my backend and systems design work, check out my{" "}
                       <a
                         href="https://github.com/Shashwattripathi23"
                         target="_blank"
