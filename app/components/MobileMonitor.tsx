@@ -77,7 +77,7 @@ export default function MobileMonitor({ projects = DEFAULT_PROJECTS, state = 'he
   const mlFilterRef = useRef<HTMLDivElement>(null);
   const devFilterRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (ref: React.RefObject<HTMLDivElement>, dir: 'up' | 'down' | 'left' | 'right', amount = 80) => {
+  const scroll = (ref: React.RefObject<HTMLDivElement | null>, dir: 'up' | 'down' | 'left' | 'right', amount = 80) => {
     if (!ref.current) return;
     const isVertical = dir === 'up' || dir === 'down';
     ref.current.scrollBy({
